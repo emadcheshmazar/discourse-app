@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { DiscourseService } from "../services/discourse-service";
+import { DiscourseApi } from "../services/discourse-api";
 import { CategoryTabs } from "../components/layout/CategoryTabs";
 import { TopicList } from "../components/ui/TopicList";
+import { testApiWithNewConfig, testDirectFetch } from "../utils/api-test";
 import type { DiscourseTopic, DiscourseCategory } from "../types/discourse";
 
 export default function Home() {
@@ -12,12 +13,12 @@ export default function Home() {
   const [categoriesLoading, setCategoriesLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const discourseService = new DiscourseService();
+  const discourseApi = new DiscourseApi();
 
   const loadCategories = async () => {
     try {
       setCategoriesLoading(true);
-      const data = await discourseService.getCategories();
+      const data = await discourseApi.getCategories();
       setCategories(data.category_list.categories);
     } catch (err) {
       console.error("خطا در بارگذاری کتگوری‌ها:", err);
@@ -35,13 +36,13 @@ export default function Home() {
       if (categoryId) {
         const category = categories.find((c) => c.id === categoryId);
         if (category) {
-          data = await discourseService.getCategoryTopics(
+          data = await discourseApi.getCategoryTopics(
             category.slug,
             category.id
           );
         }
       } else {
-        data = await discourseService.getLatestTopics();
+        data = await discourseApi.getLatestTopics();
       }
 
       setTopics(data?.topic_list.topics || []);
@@ -62,7 +63,6 @@ export default function Home() {
 
   const handleTopicClick = (topic: DiscourseTopic) => {
     console.log("تاپیک انتخاب شد:", topic);
-    // اینجا می‌تونیم به صفحه جزئیات تاپیک بریم
   };
 
   const handleRetry = () => {
@@ -70,7 +70,15 @@ export default function Home() {
   };
 
   useEffect(() => {
-    loadCategories();
+    testApiWithNewConfig().then((success) => {
+      if (success) {
+        console.log("✅ API تست موفق - بارگذاری دیتا...");
+        loadCategories();
+      } else {
+        console.log("❌ API تست ناموفق - تست مستقیم...");
+        testDirectFetch();
+      }
+    });
   }, []);
 
   useEffect(() => {
