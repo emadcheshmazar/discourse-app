@@ -1,0 +1,3040 @@
+{
+    "users": [
+      {
+        "id": 115720,
+        "username": "Danielle",
+        "name": "Danielle Lloyd",
+        "avatar_template": "/user_avatar/meta.discourse.org/danielle/{size}/260319_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 115923,
+        "username": "Discourse",
+        "name": null,
+        "avatar_template": "/user_avatar/meta.discourse.org/discourse/{size}/148734_2.png",
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 114524,
+        "username": "Pink2DS",
+        "name": "Sandra Snan",
+        "avatar_template": "/user_avatar/meta.discourse.org/pink2ds/{size}/256905_2.png",
+        "trust_level": 1
+      },
+      {
+        "id": 95552,
+        "username": "Moin",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/moin/{size}/523407_2.png",
+        "trust_level": 3
+      },
+      {
+        "id": 6586,
+        "username": "adopilot",
+        "name": "Admir Hodzic",
+        "avatar_template": "/user_avatar/meta.discourse.org/adopilot/{size}/105040_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 71968,
+        "username": "petepan23",
+        "name": "Peter",
+        "avatar_template": "/user_avatar/meta.discourse.org/petepan23/{size}/161836_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 23968,
+        "username": "david",
+        "name": "David Taylor",
+        "avatar_template": "/user_avatar/meta.discourse.org/david/{size}/157490_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 27384,
+        "username": "merefield",
+        "name": "Robert",
+        "avatar_template": "/user_avatar/meta.discourse.org/merefield/{size}/176214_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 135392,
+        "username": "NateDhaliwal",
+        "name": "Nate Dhaliwal",
+        "avatar_template": "/user_avatar/meta.discourse.org/natedhaliwal/{size}/313494_2.png",
+        "flair_name": "theme_authors",
+        "flair_url": "paintbrush",
+        "flair_bg_color": "ddd",
+        "flair_color": "111",
+        "flair_group_id": 73,
+        "trust_level": 3
+      },
+      {
+        "id": 184098,
+        "username": "jvermach",
+        "name": "Josef Vermach",
+        "avatar_template": "/user_avatar/meta.discourse.org/jvermach/{size}/526401_2.png",
+        "trust_level": 0
+      },
+      {
+        "id": 119375,
+        "username": "elmuerte",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/elmuerte/{size}/456517_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 76528,
+        "username": "Rhidian",
+        "name": "Rhidian Bramley",
+        "avatar_template": "/user_avatar/meta.discourse.org/rhidian/{size}/176630_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 162233,
+        "username": "jackierenee",
+        "name": "Jackie",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/a3d4f5/{size}.png",
+        "trust_level": 1
+      },
+      {
+        "id": 406,
+        "username": "RGJ",
+        "name": "Richard - Communiteq",
+        "avatar_template": "/user_avatar/meta.discourse.org/rgj/{size}/523185_2.png",
+        "flair_name": "support-experts",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/2/e250ec403580530d19e6a9ed42d0d525a51a9dbe.svg",
+        "flair_bg_color": "FFFFFF",
+        "flair_group_id": 142,
+        "trust_level": 4
+      },
+      {
+        "id": 60726,
+        "username": "jrgong",
+        "name": "jrgong",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/c57346/{size}.png",
+        "trust_level": 2
+      },
+      {
+        "id": 104279,
+        "username": "nat",
+        "name": "Natalie T",
+        "avatar_template": "/user_avatar/meta.discourse.org/nat/{size}/235063_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 83631,
+        "username": "Jagster",
+        "name": "Jakke Lehtonen",
+        "avatar_template": "/user_avatar/meta.discourse.org/jagster/{size}/192154_2.png",
+        "trust_level": 3
+      },
+      {
+        "id": 80880,
+        "username": "asa",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/asa/{size}/184869_2.png",
+        "flair_name": "translators",
+        "flair_url": "globe",
+        "flair_bg_color": "ddd",
+        "flair_color": "111",
+        "flair_group_id": 50,
+        "trust_level": 3
+      },
+      {
+        "id": 21127,
+        "username": "tvavrda",
+        "name": "Tomas Vavrda",
+        "avatar_template": "/user_avatar/meta.discourse.org/tvavrda/{size}/480674_2.png",
+        "flair_name": "translators",
+        "flair_url": "globe",
+        "flair_bg_color": "ddd",
+        "flair_color": "111",
+        "flair_group_id": 50,
+        "trust_level": 2
+      },
+      {
+        "id": 88571,
+        "username": "lhkjacky",
+        "name": "Jacky",
+        "avatar_template": "/user_avatar/meta.discourse.org/lhkjacky/{size}/204198_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 136529,
+        "username": "vifyirusti",
+        "name": "",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/v/bc8723/{size}.png",
+        "trust_level": 1
+      },
+      {
+        "id": 15209,
+        "username": "pfaffman",
+        "name": "Jay Pfaffman",
+        "avatar_template": "/user_avatar/meta.discourse.org/pfaffman/{size}/120154_2.png",
+        "flair_name": "support-experts",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/2/e250ec403580530d19e6a9ed42d0d525a51a9dbe.svg",
+        "flair_bg_color": "FFFFFF",
+        "flair_group_id": 142,
+        "trust_level": 4
+      },
+      {
+        "id": 184013,
+        "username": "Plentyrado",
+        "name": null,
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/p/b9bd4f/{size}.png",
+        "trust_level": 0
+      },
+      {
+        "id": 136810,
+        "username": "lindsey",
+        "name": "Lindsey Fogle",
+        "avatar_template": "/user_avatar/meta.discourse.org/lindsey/{size}/318210_2.png",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 58437,
+        "username": "Thomas_Rother",
+        "name": "Thommie Rother",
+        "avatar_template": "/user_avatar/meta.discourse.org/thomas_rother/{size}/423597_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 145678,
+        "username": "putty",
+        "name": "Derek Putnam",
+        "avatar_template": "/user_avatar/meta.discourse.org/putty/{size}/370902_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 146973,
+        "username": "eisammy",
+        "name": "Sammy",
+        "avatar_template": "/user_avatar/meta.discourse.org/eisammy/{size}/476712_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 80288,
+        "username": "one1",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/one1/{size}/493591_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 138086,
+        "username": "wenqin",
+        "name": "",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/w/85f322/{size}.png",
+        "trust_level": 2
+      },
+      {
+        "id": 73927,
+        "username": "jordan.vidrine",
+        "name": "Jordan Vidrine",
+        "avatar_template": "/user_avatar/meta.discourse.org/jordan.vidrine/{size}/515563_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 184192,
+        "username": "Harrison_Johnson",
+        "name": "Harrison Johnson",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/h/8e7dd6/{size}.png",
+        "trust_level": 0
+      },
+      {
+        "id": 8571,
+        "username": "tobiaseigen",
+        "name": "Tobias Eigen",
+        "avatar_template": "/user_avatar/meta.discourse.org/tobiaseigen/{size}/116107_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "moderator": true,
+        "trust_level": 4
+      },
+      {
+        "id": 126699,
+        "username": "GeorgSeifert",
+        "name": "",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/g/df788c/{size}.png",
+        "trust_level": 1
+      },
+      {
+        "id": 63143,
+        "username": "Ed_S",
+        "name": "Ed S",
+        "avatar_template": "/user_avatar/meta.discourse.org/ed_s/{size}/134015_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 182783,
+        "username": "Turgut_Ordu",
+        "name": "Turgut Ordu",
+        "avatar_template": "/user_avatar/meta.discourse.org/turgut_ordu/{size}/497803_2.png",
+        "trust_level": 1
+      },
+      {
+        "id": 138497,
+        "username": "ToddZ",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/toddz/{size}/328350_2.png",
+        "trust_level": 3
+      },
+      {
+        "id": 81800,
+        "username": "jimmy0017",
+        "name": "",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/j/76d3ee/{size}.png",
+        "trust_level": 2
+      },
+      {
+        "id": 80584,
+        "username": "physixfan",
+        "name": "physixfan",
+        "avatar_template": "/user_avatar/meta.discourse.org/physixfan/{size}/184201_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 74458,
+        "username": "Jacob_Peebles",
+        "name": "Jacob Peebles",
+        "avatar_template": "/user_avatar/meta.discourse.org/jacob_peebles/{size}/168161_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 127856,
+        "username": "Lilly",
+        "name": "Lillian Louis",
+        "avatar_template": "/user_avatar/meta.discourse.org/lilly/{size}/521129_2.png",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 73038,
+        "username": "jahan_gagan",
+        "name": "Jahan Gagan",
+        "avatar_template": "/user_avatar/meta.discourse.org/jahan_gagan/{size}/501948_2.png",
+        "flair_name": "plugin_authors",
+        "flair_url": "plug",
+        "flair_bg_color": "dddddd",
+        "flair_color": "111111",
+        "flair_group_id": 48,
+        "trust_level": 2
+      },
+      {
+        "id": 100484,
+        "username": "JammyDodger",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/jammydodger/{size}/254611_2.png",
+        "trust_level": 3
+      },
+      {
+        "id": 176768,
+        "username": "Anri",
+        "name": "Anri",
+        "avatar_template": "/user_avatar/meta.discourse.org/anri/{size}/505186_2.png",
+        "trust_level": 1
+      },
+      {
+        "id": 16063,
+        "username": "dylanb",
+        "name": "Dylan Burkhardt",
+        "avatar_template": "/user_avatar/meta.discourse.org/dylanb/{size}/139102_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 183932,
+        "username": "s42",
+        "name": "Simon Oberstedt",
+        "avatar_template": "/user_avatar/meta.discourse.org/s42/{size}/525981_2.png",
+        "trust_level": 1
+      },
+      {
+        "id": 24816,
+        "username": "RBoy",
+        "name": "RBoy",
+        "avatar_template": "https://avatars.discourse-cdn.com/v4/letter/r/2bfe46/{size}.png",
+        "trust_level": 2
+      },
+      {
+        "id": 12705,
+        "username": "featheredtoast",
+        "name": "Jeff Wong",
+        "avatar_template": "/user_avatar/meta.discourse.org/featheredtoast/{size}/116994_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 35474,
+        "username": "Canapin",
+        "name": "Coin-coin le Canapin",
+        "avatar_template": "/user_avatar/meta.discourse.org/canapin/{size}/119591_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 61074,
+        "username": "Dannii",
+        "name": "Dannii",
+        "avatar_template": "/user_avatar/meta.discourse.org/dannii/{size}/129087_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 165266,
+        "username": "MihirR",
+        "name": "Mihir",
+        "avatar_template": "/user_avatar/meta.discourse.org/mihirr/{size}/475158_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 183522,
+        "username": "bessnlj",
+        "name": "Nicole Jolie",
+        "avatar_template": "/user_avatar/meta.discourse.org/bessnlj/{size}/524908_2.png",
+        "trust_level": 0
+      },
+      {
+        "id": 177708,
+        "username": "jonasnaue",
+        "name": "Jonas Naue",
+        "avatar_template": "/user_avatar/meta.discourse.org/jonasnaue/{size}/508420_2.png",
+        "trust_level": 1
+      },
+      {
+        "id": 113000,
+        "username": "chapoi",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/chapoi/{size}/308804_2.png",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 171937,
+        "username": "alltiagocom",
+        "name": "Tiago",
+        "avatar_template": "/user_avatar/meta.discourse.org/alltiagocom/{size}/492709_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 26693,
+        "username": "Seth_Godin",
+        "name": "Seth Godin",
+        "avatar_template": "/user_avatar/meta.discourse.org/seth_godin/{size}/119667_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 4263,
+        "username": "mcwumbly",
+        "name": "Dave McClure",
+        "avatar_template": "/user_avatar/meta.discourse.org/mcwumbly/{size}/103861_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 8722,
+        "username": "Falco",
+        "name": "Falco",
+        "avatar_template": "/user_avatar/meta.discourse.org/falco/{size}/179432_2.png",
+        "primary_group_name": "team",
+        "flair_name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_color": "111",
+        "flair_group_id": 47,
+        "admin": true,
+        "trust_level": 4
+      },
+      {
+        "id": 78445,
+        "username": "Don",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/don/{size}/228726_2.png",
+        "trust_level": 3
+      },
+      {
+        "id": 14460,
+        "username": "hellekin",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/hellekin/{size}/51636_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 74935,
+        "username": "Anton_Akhmerov",
+        "name": "Anton Akhmerov",
+        "avatar_template": "/user_avatar/meta.discourse.org/anton_akhmerov/{size}/169548_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 14221,
+        "username": "scottfsmith",
+        "name": "Scott Smith",
+        "avatar_template": "/user_avatar/meta.discourse.org/scottfsmith/{size}/50976_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 83824,
+        "username": "riteshsaini",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/riteshsaini/{size}/266453_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 12801,
+        "username": "bartv",
+        "name": "Bart ",
+        "avatar_template": "/user_avatar/meta.discourse.org/bartv/{size}/130052_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 60848,
+        "username": "Kayla",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/kayla/{size}/128523_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 61717,
+        "username": "Roi",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/roi/{size}/130587_2.png",
+        "trust_level": 2
+      },
+      {
+        "id": 120090,
+        "username": "twofoursixeight",
+        "name": "",
+        "avatar_template": "/user_avatar/meta.discourse.org/twofoursixeight/{size}/493036_2.png",
+        "flair_name": "theme_creator",
+        "flair_url": "palette",
+        "flair_bg_color": "ddd",
+        "flair_color": "111",
+        "flair_group_id": 84,
+        "trust_level": 2
+      }
+    ],
+    "primary_groups": [
+      {
+        "id": 47,
+        "name": "team"
+      }
+    ],
+    "flair_groups": [
+      {
+        "id": 47,
+        "name": "team",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/b/ebee30bd98aef20357e4a177a5a1e45b877ce088.svg",
+        "flair_bg_color": "",
+        "flair_color": "111"
+      },
+      {
+        "id": 73,
+        "name": "theme_authors",
+        "flair_url": "paintbrush",
+        "flair_bg_color": "ddd",
+        "flair_color": "111"
+      },
+      {
+        "id": 142,
+        "name": "support-experts",
+        "flair_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/e/2/e250ec403580530d19e6a9ed42d0d525a51a9dbe.svg",
+        "flair_bg_color": "FFFFFF",
+        "flair_color": ""
+      },
+      {
+        "id": 50,
+        "name": "translators",
+        "flair_url": "globe",
+        "flair_bg_color": "ddd",
+        "flair_color": "111"
+      },
+      {
+        "id": 48,
+        "name": "plugin_authors",
+        "flair_url": "plug",
+        "flair_bg_color": "dddddd",
+        "flair_color": "111111"
+      },
+      {
+        "id": 84,
+        "name": "theme_creator",
+        "flair_url": "palette",
+        "flair_bg_color": "ddd",
+        "flair_color": "111"
+      }
+    ],
+    "topic_list": {
+      "can_create_topic": false,
+      "more_topics_url": "/latest?no_definitions=true&page=1",
+      "per_page": 30,
+      "top_tags": [
+        "ai",
+        "chat",
+        "email",
+        "rest-api",
+        "how-to",
+        "completed",
+        "sql-query",
+        "unsupported-install",
+        "pr-welcome",
+        "fixed",
+        "activity-summary",
+        "solved",
+        "tags",
+        "calendar-and-event",
+        "release-notes",
+        "sidebar",
+        "badges",
+        "mobile",
+        "official",
+        "moderation",
+        "search",
+        "composer",
+        "invites",
+        "groups",
+        "server-resources",
+        "css",
+        "subscriptions",
+        "topic-voting",
+        "polls",
+        "docker",
+        "advertising"
+      ],
+      "topics": [
+        {
+          "fancy_title": "Webinar: Community Scaries: What to Worry About in Communities",
+          "id": 386439,
+          "title": "Webinar: Community Scaries: What to Worry About in Communities",
+          "slug": "webinar-community-scaries-what-to-worry-about-in-communities",
+          "posts_count": 2,
+          "reply_count": 0,
+          "highest_post_number": 2,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8.png",
+          "created_at": "2025-10-22T14:59:38.815Z",
+          "last_posted_at": "2025-10-22T15:00:07.654Z",
+          "bumped": true,
+          "bumped_at": "2025-10-22T14:59:38.909Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": true,
+          "unpinned": null,
+          "excerpt": "While October might bring Halloween “scaries,” community managers know the real fright comes when your stats start spiking… or slumping. Join us 2025-10-28T15:00:00Z (UTC) to learn how to tell the difference between norm&hellip;",
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1000,
+              "height": 1000,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8.png"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 800,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8_2_800x800.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 600,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8_2_600x600.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 400,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8_2_400x400.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 300,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8_2_300x300.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 200,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/6/3/2/63299b6037b446f6bd145078b376784ee2d211b8_2_200x200.png"
+            }
+          ],
+          "tags": [
+            "webinar"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 111,
+          "like_count": 8,
+          "has_summary": false,
+          "last_poster_username": "Danielle",
+          "category_id": 67,
+          "pinned_globally": true,
+          "featured_link": null,
+          "ai_topic_gist": null,
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 115720,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "New to Discourse? Start here!",
+          "id": 1,
+          "title": "New to Discourse? Start here!",
+          "slug": "new-to-discourse-start-here",
+          "posts_count": 1,
+          "reply_count": 5,
+          "highest_post_number": 1,
+          "image_url": null,
+          "created_at": "2013-02-01T04:52:28.073Z",
+          "last_posted_at": "2013-02-01T04:52:28.397Z",
+          "bumped": true,
+          "bumped_at": "2025-09-23T19:13:50.543Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": true,
+          "unpinned": null,
+          "excerpt": ":waving_hand: We’re so glad you’re here! This is our official community, where you can connect, ask questions, and share ideas about Discourse, a powerful platform for support, teamwork, and everything community. \nYou’ll&hellip;",
+          "visible": true,
+          "closed": true,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 109896,
+          "like_count": 398,
+          "has_summary": false,
+          "last_poster_username": "Discourse",
+          "category_id": 67,
+          "pinned_globally": true,
+          "featured_link": null,
+          "ai_topic_gist": "Discourse, an open-source discussion platform, offers various installation options and features a community discussion site, Meta, where users can find topics on features, bugs, hosting, development, and general support.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 115923,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Emails don&rsquo;t get through always",
+          "id": 386609,
+          "title": "Emails don't get through always",
+          "slug": "emails-dont-get-through-always",
+          "posts_count": 2,
+          "reply_count": 0,
+          "highest_post_number": 2,
+          "image_url": null,
+          "created_at": "2025-10-24T07:22:44.255Z",
+          "last_posted_at": "2025-10-24T07:33:50.758Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T07:33:50.758Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 12,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "Moin",
+          "category_id": 1,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "User suggests contacting the forum admin to check email logs for rejection reasons, questioning the link-blocking policy for emails.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 114524,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "How to logout user by api",
+          "id": 386607,
+          "title": "How to logout user by api",
+          "slug": "how-to-logout-user-by-api",
+          "posts_count": 1,
+          "reply_count": 0,
+          "highest_post_number": 1,
+          "image_url": null,
+          "created_at": "2025-10-24T07:07:29.870Z",
+          "last_posted_at": "2025-10-24T07:07:29.929Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T07:07:29.929Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "rest-api"
+          ],
+          "tags_descriptions": {
+            "rest-api": "Topics about making an external request to Discourse"
+          },
+          "views": 9,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "adopilot",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "User is trying to log out users via API but receives a webpage instead of a success message despite a 200 response code.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 6586,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Theme modifiers: A brief introduction",
+          "id": 150605,
+          "title": "Theme modifiers: A brief introduction",
+          "slug": "theme-modifiers-a-brief-introduction",
+          "posts_count": 21,
+          "reply_count": 18,
+          "highest_post_number": 25,
+          "image_url": null,
+          "created_at": "2020-05-06T14:35:41.625Z",
+          "last_posted_at": "2025-10-24T06:20:57.900Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T07:01:08.357Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "theme-guides"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 4294,
+          "like_count": 92,
+          "has_summary": false,
+          "last_poster_username": "NateDhaliwal",
+          "category_id": 56,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A typo in the documentation link for theme modifiers was identified and a pull request to fix it was submitted.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 115923,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 71968,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 23968,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 27384,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 135392,
+              "primary_group_id": null,
+              "flair_group_id": 73
+            }
+          ]
+        },
+        {
+          "fancy_title": "I want to share plugin on github, do I have to add any license file? which one?",
+          "id": 386418,
+          "title": "I want to share plugin on github, do I have to add any license file? which one?",
+          "slug": "i-want-to-share-plugin-on-github-do-i-have-to-add-any-license-file-which-one",
+          "posts_count": 3,
+          "reply_count": 0,
+          "highest_post_number": 3,
+          "image_url": null,
+          "created_at": "2025-10-22T09:42:46.158Z",
+          "last_posted_at": "2025-10-24T06:21:34.702Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T06:21:34.702Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 33,
+          "like_count": 4,
+          "has_summary": false,
+          "last_poster_username": "elmuerte",
+          "category_id": 7,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Discourse plugins should use GPL v2-compatible licenses like MIT, with a suggestion to consider GPL v3 for better compatibility.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 184098,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 135392,
+              "primary_group_id": null,
+              "flair_group_id": 73
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 119375,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Discourse Category Headers theme component",
+          "id": 148682,
+          "title": "Discourse Category Headers theme component",
+          "slug": "discourse-category-headers-theme-component",
+          "posts_count": 166,
+          "reply_count": 118,
+          "highest_post_number": 173,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_1024x456.png",
+          "created_at": "2020-04-21T01:02:59.792Z",
+          "last_posted_at": "2025-10-24T05:34:09.154Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T05:34:09.154Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1121,
+              "height": 500,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/b/7/b7c34179304858a5b372d344883128cce263a01a.png"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 456,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_1024x456.png"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 356,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_800x356.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 267,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_600x267.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 178,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_400x178.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 133,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_300x133.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 89,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/b/7/b7c34179304858a5b372d344883128cce263a01a_2_200x89.png"
+            }
+          ],
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 16202,
+          "like_count": 332,
+          "has_summary": true,
+          "last_poster_username": "NateDhaliwal",
+          "category_id": 120,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A theme component for Discourse category headers is being updated to fix a text refresh issue and add expand/collapse functionality, with further improvements under consideration.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 76528,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 162233,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 406,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 60726,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 135392,
+              "primary_group_id": null,
+              "flair_group_id": 73
+            }
+          ]
+        },
+        {
+          "fancy_title": "Content Localization - Manual and Automatic with Discourse AI",
+          "id": 370969,
+          "title": "Content Localization - Manual and Automatic with Discourse AI",
+          "slug": "content-localization-manual-and-automatic-with-discourse-ai",
+          "posts_count": 39,
+          "reply_count": 21,
+          "highest_post_number": 44,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_1024x775.jpeg",
+          "created_at": "2025-07-10T02:57:18.831Z",
+          "last_posted_at": "2025-10-24T05:07:25.165Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T05:07:25.165Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 2278,
+              "height": 1726,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93.jpeg"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 775,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_1024x775.jpeg"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 606,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_800x606.jpeg"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 454,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_600x454.jpeg"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 303,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_400x303.jpeg"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 227,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_300x227.jpeg"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 151,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/f/1/f/f1feb367a7a01979443b47137b3b98dc0c0b9f93_2_200x151.jpeg"
+            }
+          ],
+          "tags": [
+            "ai",
+            "content-localization"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 1167,
+          "like_count": 62,
+          "has_summary": false,
+          "last_poster_username": "lhkjacky",
+          "category_id": 53,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Users request locale setting for all users and manual translation composer image upload support, while category-specific localization remains unavailable.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 104279,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 83631,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 80880,
+              "primary_group_id": null,
+              "flair_group_id": 50
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 21127,
+              "primary_group_id": null,
+              "flair_group_id": 50
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 88571,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Users IP address is the same as reverse proxy",
+          "id": 276396,
+          "title": "Users IP address is the same as reverse proxy",
+          "slug": "users-ip-address-is-the-same-as-reverse-proxy",
+          "posts_count": 6,
+          "reply_count": 2,
+          "highest_post_number": 6,
+          "image_url": null,
+          "created_at": "2023-08-24T03:52:54.565Z",
+          "last_posted_at": "2025-10-24T04:08:17.650Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T04:08:17.650Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 731,
+          "like_count": 2,
+          "has_summary": false,
+          "last_poster_username": "Plentyrado",
+          "category_id": 31,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user resolved the issue of seeing only the proxy server's IP in Discourse by configuring the real client IP header and setting trusted proxies.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 136529,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 15209,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 184013,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Current Projects - October 2025",
+          "id": 386328,
+          "title": "Current Projects - October 2025",
+          "slug": "current-projects-october-2025",
+          "posts_count": 10,
+          "reply_count": 6,
+          "highest_post_number": 10,
+          "image_url": null,
+          "created_at": "2025-10-23T14:36:34.625Z",
+          "last_posted_at": "2025-10-24T02:04:46.523Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T02:04:46.523Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "current-projects"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 109,
+          "like_count": 33,
+          "has_summary": false,
+          "last_poster_username": "one1",
+          "category_id": 67,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Discourse clarifies AI search opt-out options and European LLM compatibility, while discussing admin chat visibility and deprecating the search banner.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 136810,
+              "primary_group_id": null,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 58437,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 145678,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 146973,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 80288,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "How to Add Automatic Multilingual Translation Interface in Discourse?",
+          "id": 386598,
+          "title": "How to Add Automatic Multilingual Translation Interface in Discourse?",
+          "slug": "how-to-add-automatic-multilingual-translation-interface-in-discourse",
+          "posts_count": 3,
+          "reply_count": 0,
+          "highest_post_number": 3,
+          "image_url": null,
+          "created_at": "2025-10-24T01:29:55.210Z",
+          "last_posted_at": "2025-10-24T01:35:26.253Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T01:35:26.253Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 15,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "Moin",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user shared an image and another provided a link to a Discourse AI feature for automatic multilingual translation, addressing the initial query about implementing this functionality.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 138086,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Filter Favorites",
+          "id": 386594,
+          "title": "Filter Favorites",
+          "slug": "filter-favorites",
+          "posts_count": 1,
+          "reply_count": 0,
+          "highest_post_number": 1,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62.png",
+          "created_at": "2025-10-24T01:02:58.188Z",
+          "last_posted_at": "2025-10-24T01:02:58.270Z",
+          "bumped": true,
+          "bumped_at": "2025-10-24T01:02:58.270Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 930,
+              "height": 336,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62.png"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 289,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62_2_800x289.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 216,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62_2_600x216.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 144,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62_2_400x144.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 108,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62_2_300x108.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 72,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/6/9b68f7821d73c0676b6f9c592dc03a55ba9f2a62_2_200x72.png"
+            }
+          ],
+          "tags": [
+            "topic-filter"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 24,
+          "like_count": 3,
+          "has_summary": false,
+          "last_poster_username": "Moin",
+          "category_id": 120,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "The Favorite Filters theme component allows users to save and customize filter shortcuts, with admins setting default filters and users personalizing their own.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "How We Built Horizon with Design Driven Development",
+          "id": 386569,
+          "title": "How We Built Horizon with Design Driven Development",
+          "slug": "how-we-built-horizon-with-design-driven-development",
+          "posts_count": 3,
+          "reply_count": 1,
+          "highest_post_number": 3,
+          "image_url": null,
+          "created_at": "2025-10-23T20:04:54.324Z",
+          "last_posted_at": "2025-10-23T23:57:56.420Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T23:57:56.420Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 69,
+          "like_count": 16,
+          "has_summary": false,
+          "last_poster_username": "tobiaseigen",
+          "category_id": 13,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user praises the article for introducing the term “dogfooding,” sparking a discussion on its significance within the company.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 73927,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 184192,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 8571,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "Occasionally very high CPU load",
+          "id": 385336,
+          "title": "Occasionally very high CPU load",
+          "slug": "occasionally-very-high-cpu-load",
+          "posts_count": 19,
+          "reply_count": 12,
+          "highest_post_number": 19,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_938x1024.png",
+          "created_at": "2025-10-11T18:55:09.899Z",
+          "last_posted_at": "2025-10-23T23:34:20.354Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T23:34:20.354Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1448,
+              "height": 1580,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435.png"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 938,
+              "height": 1024,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_938x1024.png"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 733,
+              "height": 800,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_733x800.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 549,
+              "height": 600,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_549x600.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 366,
+              "height": 400,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_366x400.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 274,
+              "height": 300,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_274x300.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 183,
+              "height": 200,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/c/6/3/c63e440632344fa04cb2e702562168d980f0c435_2_183x200.png"
+            }
+          ],
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 154,
+          "like_count": 6,
+          "has_summary": false,
+          "last_poster_username": "pfaffman",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "GeorgSeifert is experiencing high CPU load and 502 errors, and the discussion focuses on the need for swap space despite increased RAM.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 126699,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 63143,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 83631,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 8571,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 15209,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            }
+          ]
+        },
+        {
+          "fancy_title": "How to Enable Terms of Service and Privacy Policy Pages in Discourse?",
+          "id": 386589,
+          "title": "How to Enable Terms of Service and Privacy Policy Pages in Discourse?",
+          "slug": "how-to-enable-terms-of-service-and-privacy-policy-pages-in-discourse",
+          "posts_count": 6,
+          "reply_count": 3,
+          "highest_post_number": 6,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_1024x684.png",
+          "created_at": "2025-10-23T23:04:00.348Z",
+          "last_posted_at": "2025-10-23T23:33:04.537Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T23:33:04.537Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1415,
+              "height": 946,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da.png"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 684,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_1024x684.png"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 534,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_800x534.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 401,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_600x401.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 267,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_400x267.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 200,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_300x200.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 133,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/9/b/1/9b115cab3bc23f6355ab5492ef43be1b9024e9da_2_200x133.png"
+            }
+          ],
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 19,
+          "like_count": 7,
+          "has_summary": false,
+          "last_poster_username": "ToddZ",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Turgut successfully enabled Terms of Service and Privacy Policy pages by setting the company name, and now inquires about creating a weekly newsletter page, possibly using the Page Publishing plugin.",
+          "has_accepted_answer": true,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 182783,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster, Accepted Answer",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 135392,
+              "primary_group_id": null,
+              "flair_group_id": 73
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 138497,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Does Discourse automatically remove unsupported html tag",
+          "id": 386561,
+          "title": "Does Discourse automatically remove unsupported html tag",
+          "slug": "does-discourse-automatically-remove-unsupported-html-tag",
+          "posts_count": 4,
+          "reply_count": 2,
+          "highest_post_number": 4,
+          "image_url": null,
+          "created_at": "2025-10-23T18:51:38.983Z",
+          "last_posted_at": "2025-10-24T01:36:29.685Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T23:28:39.467Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 31,
+          "like_count": 2,
+          "has_summary": false,
+          "last_poster_username": "physixfan",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Users are bypassing watchword filters by splitting words with HTML tags, and bots are creating new accounts or hacking existing ones to evade bans.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 81800,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 15209,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 80584,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Digest/Activity Summary emails not sending for users even though all conditions are met (Discourse 3.6)",
+          "id": 385651,
+          "title": "Digest/Activity Summary emails not sending for users even though all conditions are met (Discourse 3.6)",
+          "slug": "digest-activity-summary-emails-not-sending-for-users-even-though-all-conditions-are-met-discourse-3-6",
+          "posts_count": 17,
+          "reply_count": 7,
+          "highest_post_number": 18,
+          "image_url": null,
+          "created_at": "2025-10-15T03:43:02.641Z",
+          "last_posted_at": "2025-10-23T22:39:37.532Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T22:39:37.532Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "email",
+            "activity-summary"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 101,
+          "like_count": 1,
+          "has_summary": false,
+          "last_poster_username": "Moin",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Users on Discourse 3.6 are not receiving digest emails despite meeting all conditions, and changing the frequency to daily temporarily resolved the issue for some users.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 74458,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 127856,
+              "primary_group_id": null,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 73038,
+              "primary_group_id": null,
+              "flair_group_id": 48
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Discourse AI - Sentiment",
+          "id": 259599,
+          "title": "Discourse AI - Sentiment",
+          "slug": "discourse-ai-sentiment",
+          "posts_count": 14,
+          "reply_count": 24,
+          "highest_post_number": 48,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_1024x694.jpeg",
+          "created_at": "2023-04-24T19:40:01.334Z",
+          "last_posted_at": "2025-10-18T08:36:23.858Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T22:28:36.642Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1592,
+              "height": 1080,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f.jpeg"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 694,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_1024x694.jpeg"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 799,
+              "height": 542,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_799x542.jpeg"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 407,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_600x407.jpeg"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 399,
+              "height": 271,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_399x271.jpeg"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 203,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_300x203.jpeg"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 199,
+              "height": 135,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/b/7/c/b7c31d9cabfa226e3d6c2bdd0f07c6a0aefeac2f_2_199x135.jpeg"
+            }
+          ],
+          "tags": [
+            "ai",
+            "how-to",
+            "ai-sentiment",
+            "content"
+          ],
+          "tags_descriptions": {
+            "how-to": "How to guides contain steps to follow to solve a specific problem"
+          },
+          "views": 5173,
+          "like_count": 19,
+          "has_summary": false,
+          "last_poster_username": "s42",
+          "category_id": 53,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user inquires about configuring the threshold score for sentiment classification in the Discourse AI plugin.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 115923,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 100484,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 176768,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 16063,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 183932,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Discourse failure to renew certificate",
+          "id": 385148,
+          "title": "Discourse failure to renew certificate",
+          "slug": "discourse-failure-to-renew-certificate",
+          "posts_count": 9,
+          "reply_count": 5,
+          "highest_post_number": 9,
+          "image_url": null,
+          "created_at": "2025-10-09T15:38:48.936Z",
+          "last_posted_at": "2025-10-23T22:25:31.637Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T22:25:31.637Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 95,
+          "like_count": 9,
+          "has_summary": false,
+          "last_poster_username": "Dannii",
+          "category_id": 31,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Users discuss certificate renewal issues in Discourse, noting that a command line rebuild triggers renewal, with one user confirming successful renewal after this process.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 24816,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 15209,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 12705,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 35474,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 61074,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Automate post creation on Discourse with multiple users",
+          "id": 342400,
+          "title": "Automate post creation on Discourse with multiple users",
+          "slug": "automate-post-creation-on-discourse-with-multiple-users",
+          "posts_count": 4,
+          "reply_count": 1,
+          "highest_post_number": 4,
+          "image_url": null,
+          "created_at": "2024-12-14T08:51:17.422Z",
+          "last_posted_at": "2025-10-23T22:06:04.039Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T22:06:04.039Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 181,
+          "like_count": 4,
+          "has_summary": false,
+          "last_poster_username": "bessnlj",
+          "category_id": 5,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "User inquires about using the Discourse API to automate daily posts with pre-scheduling, suggesting n8n as a potential solution.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 165266,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 135392,
+              "primary_group_id": null,
+              "flair_group_id": 73
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 183522,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Text-Preview on Cards",
+          "id": 370808,
+          "title": "Text-Preview on Cards",
+          "slug": "text-preview-on-cards",
+          "posts_count": 2,
+          "reply_count": 0,
+          "highest_post_number": 2,
+          "image_url": null,
+          "created_at": "2025-06-19T07:11:25.462Z",
+          "last_posted_at": "2025-10-23T21:49:01.921Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T21:49:01.921Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "kanban-board"
+          ],
+          "tags_descriptions": {
+            "kanban-board": "Topics about the \u003Ca href=\"https://meta.discourse.org/t/kanban-board/118164\"\u003E ..."
+          },
+          "views": 64,
+          "like_count": 1,
+          "has_summary": false,
+          "last_poster_username": "chapoi",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user is troubleshooting the missing text-preview feature on cards in kanban, and another user suggests checking a specific theme component setting.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 177708,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 113000,
+              "primary_group_id": null,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "Mark as Unread - default set by admin?",
+          "id": 378715,
+          "title": "Mark as Unread - default set by admin?",
+          "slug": "mark-as-unread-default-set-by-admin",
+          "posts_count": 2,
+          "reply_count": 0,
+          "highest_post_number": 2,
+          "image_url": null,
+          "created_at": "2025-08-15T09:33:32.970Z",
+          "last_posted_at": "2025-10-23T21:46:34.870Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T21:46:34.870Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "ux"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 36,
+          "like_count": 1,
+          "has_summary": false,
+          "last_poster_username": "chapoi",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "The 'Mark as Unread' feature is clarified to reactivate notifications and reappear in the unread list, differing from bookmarking.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 171937,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 113000,
+              "primary_group_id": null,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "Can&rsquo;t include an auto-join group in an invite",
+          "id": 386518,
+          "title": "Can't include an auto-join group in an invite",
+          "slug": "cant-include-an-auto-join-group-in-an-invite",
+          "posts_count": 6,
+          "reply_count": 4,
+          "highest_post_number": 6,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_1024x660.jpeg",
+          "created_at": "2025-10-23T11:02:30.797Z",
+          "last_posted_at": "2025-10-23T21:46:03.906Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T21:46:03.906Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1920,
+              "height": 1238,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0.jpeg"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 660,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_1024x660.jpeg"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 515,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_800x515.jpeg"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 386,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_600x386.jpeg"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 257,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_400x257.jpeg"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 193,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_300x193.jpeg"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 128,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/d/c/3/dc3041fe2039a1cafb6310fa2d3cb786dc5b3fc0_2_200x128.jpeg"
+            }
+          ],
+          "tags": [
+            "invites"
+          ],
+          "tags_descriptions": {
+  
+          },
+          "views": 32,
+          "like_count": 5,
+          "has_summary": false,
+          "last_poster_username": "Moin",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "The issue was resolved by reloading the site, and a suggestion was made to report the problem to improve the user experience.",
+          "has_accepted_answer": true,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 26693,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster, Accepted Answer",
+              "user_id": 95552,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 4263,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "Unable to enable AI search results when there are no regular results",
+          "id": 386512,
+          "title": "Unable to enable AI search results when there are no regular results",
+          "slug": "unable-to-enable-ai-search-results-when-there-are-no-regular-results",
+          "posts_count": 5,
+          "reply_count": 3,
+          "highest_post_number": 5,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_1024x890.jpeg",
+          "created_at": "2025-10-23T09:42:19.898Z",
+          "last_posted_at": "2025-10-23T21:45:27.731Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T21:45:27.731Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 1364,
+              "height": 1186,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f.jpeg"
+            },
+            {
+              "max_width": 1024,
+              "max_height": 1024,
+              "width": 1024,
+              "height": 890,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_1024x890.jpeg"
+            },
+            {
+              "max_width": 800,
+              "max_height": 800,
+              "width": 800,
+              "height": 695,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_800x695.jpeg"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 521,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_600x521.jpeg"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 347,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_400x347.jpeg"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 260,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_300x260.jpeg"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 173,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/7/7/4/774fb0761b7c64c03af31d61782cb4b5aa6c6e0f_2_200x173.jpeg"
+            }
+          ],
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 35,
+          "like_count": 1,
+          "has_summary": false,
+          "last_poster_username": "RGJ",
+          "category_id": 9,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Users discuss the confusion caused by the current AI search results enablement process and propose changes to improve usability.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 406,
+              "primary_group_id": null,
+              "flair_group_id": 142
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 8722,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            }
+          ]
+        },
+        {
+          "fancy_title": "Links don&rsquo;t work in placeholder forms",
+          "id": 386578,
+          "title": "Links don't work in placeholder forms",
+          "slug": "links-dont-work-in-placeholder-forms",
+          "posts_count": 4,
+          "reply_count": 0,
+          "highest_post_number": 4,
+          "image_url": null,
+          "created_at": "2025-01-12T22:18:13.379Z",
+          "last_posted_at": "2025-09-04T08:50:26.100Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:22:42.565Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "placeholder-forms"
+          ],
+          "tags_descriptions": {
+            "placeholder-forms": "Topics about the \u003Ca href=\"https://meta.discourse.org/t/placeholder-forms/1135..."
+          },
+          "views": 16,
+          "like_count": 3,
+          "has_summary": false,
+          "last_poster_username": "hellekin",
+          "category_id": 1,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": null,
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 35474,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 78445,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 14460,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Flags cannot be deleted immediately after creation",
+          "id": 386577,
+          "title": "Flags cannot be deleted immediately after creation",
+          "slug": "flags-cannot-be-deleted-immediately-after-creation",
+          "posts_count": 1,
+          "reply_count": 0,
+          "highest_post_number": 1,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e.png",
+          "created_at": "2025-10-23T20:22:27.762Z",
+          "last_posted_at": "2025-10-23T20:22:27.835Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:22:27.835Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 604,
+              "height": 133,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 132,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e_2_600x132.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 88,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e_2_400x88.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 66,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e_2_300x66.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 44,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/4X/5/4/8/548c2bcfb8e412e62642cbf3bc3e0a582b0bc01e_2_200x44.png"
+            }
+          ],
+          "tags": [
+            "moderation",
+            "admin-sidebar"
+          ],
+          "tags_descriptions": {
+            "admin-sidebar": "Topics about the new experimental \u003Ca href=\"\"\u003E admin sidebar\u003C/a\u003E"
+          },
+          "views": 16,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "Anton_Akhmerov",
+          "category_id": 1,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "User reports inability to delete a newly created flag in a fresh sandbox instance using 3.6.0.beta2-latest, and seeks clarification on flags API configuration.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 74935,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Code highlights prevent the placeholder value from being displayed in a codeblock",
+          "id": 386574,
+          "title": "Code highlights prevent the placeholder value from being displayed in a codeblock",
+          "slug": "code-highlights-prevent-the-placeholder-value-from-being-displayed-in-a-codeblock",
+          "posts_count": 1,
+          "reply_count": 0,
+          "highest_post_number": 1,
+          "image_url": null,
+          "created_at": "2025-10-23T20:18:04.350Z",
+          "last_posted_at": "2025-10-23T20:18:04.432Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:18:04.432Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "placeholder-forms"
+          ],
+          "tags_descriptions": {
+            "placeholder-forms": "Topics about the \u003Ca href=\"https://meta.discourse.org/t/placeholder-forms/1135..."
+          },
+          "views": 13,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "Canapin",
+          "category_id": 1,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Code highlights prevent placeholder values from displaying in code blocks, but specifying 'txt' as the language works around the issue.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 35474,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "S3 image bandwidth costs are getting annoying",
+          "id": 122052,
+          "title": "S3 image bandwidth costs are getting annoying",
+          "slug": "s3-image-bandwidth-costs-are-getting-annoying",
+          "posts_count": 32,
+          "reply_count": 27,
+          "highest_post_number": 35,
+          "image_url": null,
+          "created_at": "2019-07-04T01:45:59.914Z",
+          "last_posted_at": "2025-10-23T20:03:33.601Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:03:33.601Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [],
+          "tags_descriptions": {
+  
+          },
+          "views": 4069,
+          "like_count": 99,
+          "has_summary": false,
+          "last_poster_username": "bartv",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "A user inquires about changes to settings for an S3 image service setup that has been working fine for six years.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 14221,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 8722,
+              "primary_group_id": 47,
+              "flair_group_id": 47
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 83824,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 63143,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 12801,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Dark/Light Mode Toggle delivers mixed results when OS settings do not match toggle settings",
+          "id": 386568,
+          "title": "Dark/Light Mode Toggle delivers mixed results when OS settings do not match toggle settings",
+          "slug": "dark-light-mode-toggle-delivers-mixed-results-when-os-settings-do-not-match-toggle-settings",
+          "posts_count": 1,
+          "reply_count": 0,
+          "highest_post_number": 1,
+          "image_url": null,
+          "created_at": "2025-10-23T20:02:04.874Z",
+          "last_posted_at": "2025-10-23T20:02:04.964Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:02:04.964Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": null,
+          "tags": [
+            "dark-mode-toggle"
+          ],
+          "tags_descriptions": {
+            "dark-mode-toggle": "Topics about the \u003Ca href=\"https://meta.discourse.org/t/dark-light-mode-toggle..."
+          },
+          "views": 9,
+          "like_count": 0,
+          "has_summary": false,
+          "last_poster_username": "Kayla",
+          "category_id": 6,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "User reports that CSS dark/light mode styles are ignored when OS settings and sidebar toggle settings do not match.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": "latest single",
+              "description": "Original Poster, Most Recent Poster",
+              "user_id": 60848,
+              "primary_group_id": null,
+              "flair_group_id": null
+            }
+          ]
+        },
+        {
+          "fancy_title": "Discourse BBCode Color",
+          "id": 65363,
+          "title": "Discourse BBCode Color",
+          "slug": "discourse-bbcode-color",
+          "posts_count": 7,
+          "reply_count": 8,
+          "highest_post_number": 12,
+          "image_url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8.png",
+          "created_at": "2017-06-29T20:56:20.797Z",
+          "last_posted_at": "2024-09-07T01:28:30.625Z",
+          "bumped": true,
+          "bumped_at": "2025-10-23T20:00:45.787Z",
+          "archetype": "regular",
+          "unseen": false,
+          "pinned": false,
+          "unpinned": null,
+          "visible": true,
+          "closed": false,
+          "archived": false,
+          "bookmarked": null,
+          "liked": null,
+          "thumbnails": [
+            {
+              "max_width": null,
+              "max_height": null,
+              "width": 744,
+              "height": 241,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/original/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8.png"
+            },
+            {
+              "max_width": 600,
+              "max_height": 600,
+              "width": 600,
+              "height": 194,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8_2_600x194.png"
+            },
+            {
+              "max_width": 400,
+              "max_height": 400,
+              "width": 400,
+              "height": 129,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8_2_400x129.png"
+            },
+            {
+              "max_width": 300,
+              "max_height": 300,
+              "width": 300,
+              "height": 97,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8_2_300x97.png"
+            },
+            {
+              "max_width": 200,
+              "max_height": 200,
+              "width": 200,
+              "height": 64,
+              "url": "https://d11a6trkgmumsb.cloudfront.net/optimized/3X/2/5/252cfb974ee8264cd6d35426a704f3a8bcc1cce8_2_200x64.png"
+            }
+          ],
+          "tags": [
+            "official",
+            "bbcode-color"
+          ],
+          "tags_descriptions": {
+            "official": "Themes, theme components, or plugins officially maintained by the Discourse team"
+          },
+          "views": 7129,
+          "like_count": 29,
+          "has_summary": false,
+          "last_poster_username": "twofoursixeight",
+          "category_id": 22,
+          "pinned_globally": false,
+          "featured_link": null,
+          "ai_topic_gist": "Discussion revolves around the purpose and functionality of the Discourse BBCode Color plugin, with users seeking clarification on its differences from the Discourse BBCode plugin and suggesting potential feature additions, such as preset color selectors.",
+          "has_accepted_answer": false,
+          "can_vote": false,
+          "posters": [
+            {
+              "extras": null,
+              "description": "Original Poster",
+              "user_id": 115923,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 27384,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 61717,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": null,
+              "description": "Frequent Poster",
+              "user_id": 100484,
+              "primary_group_id": null,
+              "flair_group_id": null
+            },
+            {
+              "extras": "latest",
+              "description": "Most Recent Poster",
+              "user_id": 120090,
+              "primary_group_id": null,
+              "flair_group_id": 84
+            }
+          ]
+        }
+      ]
+    }
+  }
