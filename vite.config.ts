@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig(({ mode }) => ({
-  base: "/discourse-landing-build/", // 👈 اینو درست کن
+  base: "/discourse-landing-build/", 
   plugins: [react()],
   server: {
     proxy:
