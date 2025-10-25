@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { DiscourseApi } from "../services/discourse-api";
 import { CategoryTabs } from "../components/layout/CategoryTabs";
 import { TopicList } from "../components/ui/TopicList";
+import { HeroBanner } from "../components/layout/HeroBanner";
+import { PostsSection } from "../components/layout/PostsSection";
+import { SpaceHeader } from "../components/layout/SpaceHeader";
 import { testApiWithNewConfig, testDirectFetch } from "../utils/api-test";
 import type { DiscourseTopic, DiscourseCategory } from "../types/discourse";
 
@@ -88,13 +91,10 @@ export default function Home() {
   }, [categories]);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">🏠 صفحه اصلی</h1>
-        <p className="text-gray-600">
-          آخرین تاپیک‌های Discourse را اینجا مشاهده کنید
-        </p>
-      </div>
+    <div className="max-w-4xl mx-auto p-0">
+      <HeroBanner />
+      <PostsSection />
+      <SpaceHeader />
 
       <CategoryTabs
         categories={categories}

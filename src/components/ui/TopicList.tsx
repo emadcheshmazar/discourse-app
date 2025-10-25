@@ -29,13 +29,7 @@ export function TopicList({
   }
 
   if (error) {
-    return (
-      <ErrorMessage
-        message={error}
-        onRetry={onRetry}
-        className="mx-4"
-      />
-    );
+    return <ErrorMessage message={error} onRetry={onRetry} className="mx-4" />;
   }
 
   if (topics.length === 0) {
@@ -47,14 +41,12 @@ export function TopicList({
   }
 
   return (
-    <div className="space-y-4">
+    <ul
+      className="grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
+    >
       {topics.map((topic) => (
-        <TopicCard
-          key={topic.id}
-          topic={topic}
-          onClick={onTopicClick}
-        />
+        <TopicCard key={topic.id} topic={topic} onClick={onTopicClick} />
       ))}
-    </div>
+    </ul>
   );
 }

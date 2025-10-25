@@ -7,8 +7,8 @@ interface TabListProps {
 
 export function TabList({ children, className = "" }: TabListProps) {
   return (
-    <div className={`flex space-x-1 border-b border-gray-200 ${className}`}>
-      {children}
+    <div className={`tab-list-container ${className}`}>
+      <div className="tab-list-content">{children}</div>
     </div>
   );
 }

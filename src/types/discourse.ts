@@ -25,6 +25,7 @@ export interface DiscourseTopic {
   posts_count: number;
   reply_count: number;
   highest_post_number: number;
+  image_url: string | null;
   created_at: string;
   last_posted_at: string;
   bumped: boolean;
