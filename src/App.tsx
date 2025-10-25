@@ -13,7 +13,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/discourse-landing-build/" element={<Home />} />
           </Routes>
         </main>
       </div>
