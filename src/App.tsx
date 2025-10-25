@@ -14,6 +14,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/discourse-landing-build/" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </main>
       </div>

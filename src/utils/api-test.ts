@@ -1,8 +1,5 @@
 export async function testApiWithNewConfig() {
-  const apiBase =
-    import.meta.env.MODE === "development"
-      ? "/api/discourse"
-      : "https://aliasysdiscourse.ir";
+  const apiBase = "https://aliasysdiscourse.ir";
 
   console.log(`🔧 Mode: ${import.meta.env.MODE}`);
   console.log(`🌐 API Base: ${apiBase}`);

@@ -1,8 +1,5 @@
 export const API_CONFIG = {
-  BASE_URL:
-    import.meta.env.MODE === "development"
-      ? "/api/discourse"
-      : "https://aliasysdiscourse.ir",
+  BASE_URL: "https://aliasysdiscourse.ir",
   TIMEOUT: 10000,
   RETRY_ATTEMPTS: 3,
 } as const;

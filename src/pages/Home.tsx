@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { DiscourseApi } from "../services/discourse-api";
+import { DiscourseFetchService } from "../services/discourse-fetch";
 import { CategoryTabs } from "../components/layout/CategoryTabs";
 import { TopicList } from "../components/ui/TopicList";
 import { HeroBanner } from "../components/layout/HeroBanner";
@@ -16,7 +16,7 @@ export default function Home() {
   const [categoriesLoading, setCategoriesLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const discourseApi = new DiscourseApi();
+  const discourseApi = new DiscourseFetchService();
 
   const loadCategories = async () => {
     try {
