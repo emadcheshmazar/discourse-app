@@ -7,14 +7,12 @@ export function HeroBanner() {
     >
       <div className="hero-banner-container">
         <div className="hero-banner-content">
-          <div className="hero-banner-subtitle">YOUR TRUSTED TECH PARTNER</div>
-          <h2 className="hero-banner-title">ALIASYS</h2>
+          <div className="hero-banner-subtitle">همراه مطمئن فناوری شما</div>
+          <h2 className="hero-banner-title">آلیاسیــس</h2>
           <div className="hero-banner-description">
             <article className="prose" style={{ color: "inherit" }}>
               <p>
-                <strong>
-                  Enabling Continuity through Technocratic Culture
-                </strong>
+                <strong>توانمندسازی تداوم با فرهنگ تکنوکراتیک</strong>
                 <br />
               </p>
             </article>

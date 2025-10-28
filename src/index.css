@@ -1,13 +1,83 @@
-/* خط فارسی */
-@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap");
+/* فونت استعداد محلی */
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad";
+  src: url("/fonts/Estedad-FD-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Vazirmatn", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: "Estedad", "Vazirmatn", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -181,14 +251,14 @@
   --bm-font-line-height-h-lg: 40px;
   --bm-font-line-height-h-xl: 44px;
   --bm-font-line-height-h-2xl: 52px;
-  --bm-font-family-display: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
-  --bm-font-family-sans: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-display: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-sans: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
   --bm-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace, ui-monospace, SFMono-Regular, "SF Mono",
     Consolas, "Liberation Mono", Menlo, monospace;
@@ -958,14 +1028,14 @@ body,
   --bm-font-line-height-h-lg: 40px;
   --bm-font-line-height-h-xl: 44px;
   --bm-font-line-height-h-2xl: 52px;
-  --bm-font-family-display: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
-  --bm-font-family-sans: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-display: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-sans: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
   --bm-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace, ui-monospace, SFMono-Regular, "SF Mono",
     Consolas, "Liberation Mono", Menlo, monospace;
@@ -1501,14 +1571,14 @@ body,
   --bm-font-line-height-h-lg: 40px;
   --bm-font-line-height-h-xl: 44px;
   --bm-font-line-height-h-2xl: 52px;
-  --bm-font-family-display: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
-  --bm-font-family-sans: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-display: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-sans: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
   --bm-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace, ui-monospace, SFMono-Regular, "SF Mono",
     Consolas, "Liberation Mono", Menlo, monospace;
@@ -1826,14 +1896,14 @@ body,
   --bm-font-line-height-h-lg: 40px;
   --bm-font-line-height-h-xl: 44px;
   --bm-font-line-height-h-2xl: 52px;
-  --bm-font-family-display: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
-  --bm-font-family-sans: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-display: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-sans: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
   --bm-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace, ui-monospace, SFMono-Regular, "SF Mono",
     Consolas, "Liberation Mono", Menlo, monospace;
@@ -2217,14 +2287,14 @@ body,
   --bm-font-line-height-h-lg: 40px;
   --bm-font-line-height-h-xl: 44px;
   --bm-font-line-height-h-2xl: 52px;
-  --bm-font-family-display: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
-  --bm-font-family-sans: "Poppins", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-display: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
+  --bm-font-family-sans: "Estedad", "Vazirmatn", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Noto Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji Mozilla", "Android Emoji";
   --bm-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace, ui-monospace, SFMono-Regular, "SF Mono",
     Consolas, "Liberation Mono", Menlo, monospace;

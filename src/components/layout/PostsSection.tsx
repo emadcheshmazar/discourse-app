@@ -4,13 +4,13 @@ export function PostsSection() {
     {
       id: 1,
       title:
-        "Business Continuity in Data Centers – A Strategic Imperative for Forward-Looking Organizations",
+        "تداوم کسب‌وکار در مراکز داده – ضرورتی راهبردی برای سازمان‌های آینده‌نگر",
       date: "07/30/2025",
       link: "/technocratic-talks-hwaqgzms/post/business-continuity-in-data-centers---a-strategic-imperative-for-forward-Z06Ndyrzz7ZWMf4",
     },
     {
       id: 2,
-      title: "Continuity as a Designed Harmony",
+      title: "تداوم به مثابه هارمونیِ طراحی‌شده",
       date: "05/28/2025",
       link: "/technocratic-talks-hwaqgzms/post/tech-talk-2-SzVujoO4Gwdr4ys",
     },
@@ -26,10 +26,10 @@ export function PostsSection() {
             style={{ backgroundColor: "#ffffff", height: "200px" }}
           >
             <div className="w-full h-full flex flex-col justify-center items-center text-center text-black px-6 py-6">
-              <div className="font-semibold text-heading-2xs">
-                Welcome to the World of
-              </div>
-              <h2 className="font-bold text-heading-md">Business Continuity</h2>
+              <div className="font-semibold text-heading-2xs">به دنیای</div>
+              <h2 className="font-bold text-heading-md">
+                تداوم کسب‌وکار خوش آمدید
+              </h2>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ export function PostsSection() {
                         className="cursor-pointer rounded-base transition duration-200 focus:outline-none focus-visible:ring basis-full break-words min-w-0 inline-block no-underline"
                         href={post.link}
                       >
-                        <h2 className="font-medium text-heading-2xs text-content line-clamp-3 text-left">
+                        <h2 className="font-medium text-heading-2xs text-content line-clamp-3 text-right">
                           {post.title}
                         </h2>
                       </a>
