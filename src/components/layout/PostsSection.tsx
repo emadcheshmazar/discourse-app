@@ -18,25 +18,10 @@ export function PostsSection() {
 
   return (
     <section className="w-full">
-      <div className="grid grid-cols-2 gap-1 w-full">
-        {/* Static Welcome Section */}
-        <div className="w-full">
-          <div
-            className="relative rounded-base overflow-hidden shadow-card border-base border-card w-full"
-            style={{ backgroundColor: "#ffffff", height: "200px" }}
-          >
-            <div className="w-full h-full flex flex-col justify-center items-center text-center text-black px-6 py-6">
-              <div className="font-semibold text-heading-2xs">به دنیای</div>
-              <h2 className="font-bold text-heading-md">
-                تداوم کسب‌وکار خوش آمدید
-              </h2>
-            </div>
-          </div>
-        </div>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 w-full">
         {/* Posts Section */}
         <div className="w-full">
-          <div className="grid grid-cols-2 gap-1 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 w-full">
             {posts.map((post) => (
               <div
                 key={post.id}
@@ -74,6 +59,21 @@ export function PostsSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Static Welcome Section */}
+        <div className="w-full">
+          <div
+            className="relative rounded-base overflow-hidden shadow-card border-base border-card w-full"
+            style={{ backgroundColor: "#ffffff", height: "200px" }}
+          >
+            <div className="w-full h-full flex flex-col justify-center items-center text-center text-black px-6 py-6">
+              <div className="font-semibold text-heading-2xs">به دنیای</div>
+              <h2 className="font-bold text-heading-md">
+                تداوم کسب‌وکار خوش آمدید
+              </h2>
+            </div>
           </div>
         </div>
       </div>

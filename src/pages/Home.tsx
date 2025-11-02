@@ -6,6 +6,18 @@ import { PostsSection } from "../components/layout/PostsSection";
 import { SpaceHeader } from "../components/layout/SpaceHeader";
 import { testApiWithNewConfig, testDirectFetch } from "../utils/api-test";
 import type { DiscourseTopic, DiscourseCategory } from "../types/discourse";
+import { HorizontalImageCardsSection } from "../components/layout/HorizontalImageCardsSection";
+import { BusinessAssociatesSection } from "../components/layout/BusinessAssociatesSection";
+import { BannerSection } from "../components/layout/BannerSection";
+import { NewsHeaderSection } from "../components/layout/LatestNewsSection";
+import { SectionHeader } from "../components/layout/SectionHeader";
+import { TopProductsCardsSection } from "../components/layout/TopProductsCardsSection";
+import { FooterBannerSection } from "../components/layout/FooterBannerSection";
+import { LatestServicesSection } from "../components/layout/LatestServicesSection";
+import { ServicesCardsSection } from "../components/layout/ServicesCardsSection";
+import { LatestNewsAndContinuitySection } from "../components/layout/LatestNewsAndContinuitySection";
+import { IndustrySLACardsSection } from "../components/layout/IndustrySLACardsSection";
+import { Footer } from "../components/layout/Footer";
 
 export default function Home() {
   const [topics, setTopics] = useState<DiscourseTopic[]>([]);
@@ -137,26 +149,75 @@ export default function Home() {
   }, [categories]);
 
   return (
-    <div className="max-w-4xl mx-auto p-0">
+    <div className="w-full max-w-[1400px] mx-auto px-2 md:px-4 lg:px-6">
       <HeroBanner />
       <PostsSection />
       <SpaceHeader />
-
       <CategoryTabs
         categories={categories}
         activeCategoryId={activeCategoryId}
         onCategoryChange={handleCategoryChange}
         loading={categoriesLoading}
       />
-
+      <HorizontalImageCardsSection />
+      <BusinessAssociatesSection />
+      <BannerSection />
+      <NewsHeaderSection />
       <TopicList
         topics={topics}
+        limit={3}
+        offset={0}
         loading={loading}
         error={error}
         onTopicClick={handleTopicClick}
         onRetry={handleRetry}
         emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
       />
+      <SectionHeader />
+      <CategoryTabs
+        categories={categories}
+        activeCategoryId={activeCategoryId}
+        onCategoryChange={handleCategoryChange}
+        loading={categoriesLoading}
+      />
+      <TopProductsCardsSection />
+      <FooterBannerSection />
+      <LatestServicesSection />
+      <TopicList
+        topics={topics}
+        limit={3}
+        offset={3}
+        loading={loading}
+        error={error}
+        onTopicClick={handleTopicClick}
+        onRetry={handleRetry}
+        emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
+      />
+      <SectionHeader
+        title="خدمات برتر ما"
+        subtitle="از بهترین متخصصان در شهر آلیا"
+        blockId="top-services-section"
+      />
+      <ServicesCardsSection />
+      <LatestNewsAndContinuitySection />
+      <TopicList
+        topics={topics}
+        limit={3}
+        offset={6}
+        loading={loading}
+        error={error}
+        onTopicClick={handleTopicClick}
+        onRetry={handleRetry}
+        emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
+      />
+      <SectionHeader
+        title="برترین SLA های صنعتی ما"
+        subtitle="از برترین مدیران تکنوکرات ما"
+        blockId="top-industry-slas-section"
+        extraPadding={true}
+      />
+      <IndustrySLACardsSection />
+      <Footer />
     </div>
   );
 }

@@ -10,6 +10,8 @@ interface TopicListProps {
   onTopicClick?: (topic: DiscourseTopic) => void;
   onRetry?: () => void;
   emptyMessage?: string;
+  limit?: number;
+  offset?: number;
 }
 
 export function TopicList({
@@ -19,6 +21,8 @@ export function TopicList({
   onTopicClick,
   onRetry,
   emptyMessage = "هیچ تاپیکی یافت نشد.",
+  limit,
+  offset,
 }: TopicListProps) {
   if (loading) {
     return (
@@ -40,11 +44,14 @@ export function TopicList({
     );
   }
 
+  const displayTopics =
+    limit && offset !== undefined
+      ? topics.slice(offset, offset + limit)
+      : topics;
+
   return (
-    <ul
-      className="grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
-    >
-      {topics.map((topic) => (
+    <ul className="grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+      {displayTopics.map((topic) => (
         <TopicCard key={topic.id} topic={topic} onClick={onTopicClick} />
       ))}
     </ul>

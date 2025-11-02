@@ -26,7 +26,7 @@ export function CategoryTabs({
   }
 
   return (
-    <div className="mb-6">
+    <div className="mb-6 mt-1">
       <TabList>
         <Tab
           id="all"
