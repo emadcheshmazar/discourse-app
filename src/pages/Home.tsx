@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { DiscourseFetchService } from "../services/discourse-fetch";
 import { CategoryTabs } from "../components/layout/CategoryTabs";
 import { TopicList } from "../components/ui/TopicList";
 import { HeroBanner } from "../components/layout/HeroBanner";
@@ -16,15 +15,43 @@ export default function Home() {
   const [categoriesLoading, setCategoriesLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const discourseApi = new DiscourseFetchService();
-
   const loadCategories = async () => {
     try {
       setCategoriesLoading(true);
-      const data = await discourseApi.getCategories();
-      setCategories(data.category_list.categories);
+
+      // استفاده از همان متدی که در api-test.ts کار می‌کند
+      const apiBase = import.meta.env.DEV
+        ? "/api/discourse"
+        : "https://aliasysdiscourse.ir";
+
+      const response = await fetch(`${apiBase}/categories.json`, {
+        method: "GET",
+        mode: import.meta.env.DEV ? "same-origin" : "cors",
+        credentials: "include",
+        headers: {
+          accept: "application/json, text/javascript, */*; q=0.01",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const categoriesArray = data.category_list?.categories || [];
+
+      console.log("📋 لیست کامل کتگوری‌ها:", categoriesArray);
+      categoriesArray.forEach((category: DiscourseCategory, index: number) => {
+        console.log(
+          `${index + 1}. [ID: ${category.id}] ${category.name} (slug: ${
+            category.slug
+          }, topics: ${category.topic_count})`
+        );
+      });
+
+      setCategories(categoriesArray);
     } catch (err) {
-      console.error("خطا در بارگذاری کتگوری‌ها:", err);
+      console.error("❌ خطا در بارگذاری کتگوری‌ها:", err);
     } finally {
       setCategoriesLoading(false);
     }
@@ -35,25 +62,44 @@ export default function Home() {
       setLoading(true);
       setError(null);
 
-      let data;
+      const apiBase = import.meta.env.DEV
+        ? "/api/discourse"
+        : "https://aliasysdiscourse.ir";
+
+      let url: string;
       if (categoryId) {
         const category = categories.find((c) => c.id === categoryId);
         if (category) {
-          data = await discourseApi.getCategoryTopics(
-            category.slug,
-            category.id
-          );
+          url = `${apiBase}/c/${category.slug}/${category.id}/l/latest.json?filter=default`;
+        } else {
+          console.warn(`⚠️ Category not found: ${categoryId}`);
+          setLoading(false);
+          return;
         }
       } else {
-        data = await discourseApi.getLatestTopics();
+        url = `${apiBase}/latest.json`;
       }
 
-      setTopics(data?.topic_list.topics || []);
+      const response = await fetch(url, {
+        method: "GET",
+        mode: import.meta.env.DEV ? "same-origin" : "cors",
+        credentials: "include",
+        headers: {
+          accept: "application/json, text/javascript, */*; q=0.01",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const topicsArray = data?.topic_list?.topics || [];
+      setTopics(topicsArray);
     } catch (err) {
-      setError(
-        "خطا در بارگذاری تاپیک‌ها. لطفاً دامنه Discourse را در فایل constants/api.ts تنظیم کنید."
-      );
-      console.error(err);
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      console.error("❌ Error loading topics:", errorMessage);
+      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

@@ -170,6 +170,7 @@ export interface TopicListParams {
   order?: "created" | "activity" | "views" | "posts";
   ascending?: boolean;
   category?: number;
+  filter?: string; // برای فیلتر کردن تاپیک‌ها (مثل "default")
 }
 
 export interface SearchParams {

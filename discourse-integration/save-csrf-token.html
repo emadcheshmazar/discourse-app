@@ -1,0 +1,54 @@
+<!-- 
+اسکریپت برای ذخیره CSRF Token در localStorage
+این اسکریپت را در Discourse نصب کنید تا CSRF token در localStorage ذخیره شود
+
+نصب:
+1. به Admin → Customize → Themes → Edit HTML/CSS بروید
+2. در بخش common/head.html یا Theme Component → Head این کد را اضافه کنید
+-->
+
+<script type="text/javascript">
+  (function () {
+    // تابع برای ذخیره CSRF token
+    function saveCsrfToken() {
+      // دریافت CSRF token از meta tag
+      const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+      if (csrfMeta) {
+        const csrfToken = csrfMeta.getAttribute("content");
+        if (csrfToken) {
+          // ذخیره در localStorage
+          localStorage.setItem("discourse_csrf_token", csrfToken);
+          console.log("✅ CSRF token saved to localStorage");
+        }
+      }
+    }
+
+    // اجرای فوری
+    saveCsrfToken();
+
+    // همچنین بعد از بارگذاری کامل صفحه
+    document.addEventListener("DOMContentLoaded", saveCsrfToken);
+
+    // اگر Discourse از AJAX استفاده می‌کند، بعد از هر درخواست هم بروزرسانی کنیم
+    if (window.$) {
+      $(document).ajaxComplete(function () {
+        setTimeout(saveCsrfToken, 100);
+      });
+    }
+
+    // MutationObserver برای ردیابی تغییرات DOM (اگر meta tag بعداً اضافه شود)
+    const observer = new MutationObserver(function () {
+      const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+      if (csrfMeta && csrfMeta.getAttribute("content")) {
+        saveCsrfToken();
+      }
+    });
+
+    observer.observe(document.head, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["content"],
+    });
+  })();
+</script>
