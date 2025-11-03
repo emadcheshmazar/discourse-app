@@ -42,17 +42,4 @@ export class HttpClient {
     const response: AxiosResponse<T> = await this.client.delete(url);
     return response.data;
   }
-
-  setHeaders(headers: Record<string, string>): void {
-    Object.entries(headers).forEach(([key, value]) => {
-      this.client.defaults.headers.common[key] = value;
-    });
-  }
-
-  setApiKey(apiKey: string, username: string): void {
-    this.setHeaders({
-      "Api-Key": apiKey,
-      "Api-Username": username,
-    });
-  }
 }

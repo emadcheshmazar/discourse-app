@@ -73,8 +73,4 @@ export class DiscourseService {
     const endpoint = ENDPOINTS.TOPIC.replace("{topic_id}", String(topicId));
     return this.httpClient.get<DiscourseTopicDetail>(endpoint);
   }
-
-  setApiCredentials(apiKey: string, username: string): void {
-    this.httpClient.setApiKey(apiKey, username);
-  }
 }

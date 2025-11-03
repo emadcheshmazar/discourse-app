@@ -54,8 +54,4 @@ export class DiscourseApi {
     const url = ENDPOINTS.TOPIC.replace("{topic_id}", String(id));
     return this.http.get<DiscourseTopicDetail>(url);
   }
-
-  setApiKey(key: string, username: string) {
-    this.http.setApiKey(key, username);
-  }
 }

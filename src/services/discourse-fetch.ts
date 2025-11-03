@@ -22,40 +22,6 @@ export class DiscourseFetchService {
     }
   }
 
-  /**
-   * CSRF token برای حالت توسعه (هاردکد)
-   * این token از نمونه موفق fetch گرفته شده است
-   * آخرین بروزرسانی: از درخواست موفق categories.json
-   */
-  private readonly DEV_CSRF_TOKEN =
-    "ik6bj9SiQVSq9EdbLaTTp2EATCwY1t0SBli3AApSIrv7GE_CeKUKVFm_NfDWF8rtb0pj5HE5Qd1g4d1OkbX1rg";
-
-  /**
-   * دریافت CSRF tokenl
-   * در حالت development از token هاردکد استفاده می‌کند
-   * در حالت production از localStorage می‌خواند
-   */
-  private getCsrfToken(): string | null {
-    // در حالت development از token هاردکد استفاده کن
-    if (import.meta.env.DEV) {
-      console.log("🔧 Development mode: Using hardcoded CSRF token");
-      return this.DEV_CSRF_TOKEN;
-    }
-
-    // در حالت production از localStorage بخوان
-    try {
-      const token = localStorage.getItem("discourse_csrf_token");
-      if (token) {
-        console.log("✅ Using CSRF token from localStorage");
-        return token;
-      }
-    } catch {
-      // localStorage در دسترس نیست
-    }
-
-    return null;
-  }
-
   private async fetchWithCORS<T>(
     endpoint: string,
     params?: Record<string, unknown>
@@ -76,51 +42,20 @@ export class DiscourseFetchService {
 
     console.log(`🌐 Fetching: ${url.toString()}`);
 
-    // در حالت development با proxy، همه هدرها در proxy configuration اضافه شده‌اند
-    const isProxyMode =
-      import.meta.env.DEV && this.baseUrl.startsWith("/api/discourse");
-
-    // ساخت هدرهای لازم
-    // در proxy mode، اکثر هدرها در proxy configuration اضافه می‌شوند
+    // هدرهای حداقلی؛ بدون هیچ‌گونه مقادیر مرتبط با احراز هویت
     const headers: Record<string, string> = {
       accept: "application/json, text/javascript, */*; q=0.01",
     };
 
-    // اگر از proxy استفاده نمی‌کنیم، تمام هدرها را اضافه می‌کنیم
-    if (!isProxyMode) {
-      const csrfToken = this.getCsrfToken();
-
-      headers["accept-language"] = "en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7";
-      headers["discourse-logged-in"] = "true";
-      headers["discourse-present"] = "true";
-      headers["discourse-track-view"] = "true";
-      headers.priority = "u=1, i";
-      headers["sec-fetch-dest"] = "empty";
-      headers["sec-fetch-mode"] = "cors";
-      headers["sec-fetch-site"] = "same-origin";
-      headers["x-requested-with"] = "XMLHttpRequest";
-
-      if (csrfToken) {
-        headers["x-csrf-token"] = csrfToken;
-      } else {
-        console.warn("⚠️ CSRF token not available - API may return 403");
-      }
-    }
-
     try {
       const response = await fetch(url.toString(), {
         method: "GET",
-        mode: isProxyMode ? "same-origin" : "cors", // با proxy از same-origin استفاده می‌کنیم
-        credentials: "include", // ارسال کوکی‌ها (مهم!)
+        mode: "cors",
+        credentials: "omit", // عدم ارسال کوکی‌ها و اطلاعات احراز هویت
         headers,
       });
 
       if (!response.ok) {
-        if (response.status === 403) {
-          throw new Error(
-            "403 Forbidden: نیاز به لاگین در Discourse. لطفاً ابتدا در Discourse لاگین کنید و سپس به این صفحه بروید."
-          );
-        }
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
