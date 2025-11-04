@@ -218,6 +218,7 @@ export default function Home() {
       />
       <IndustrySLACardsSection />
       <Footer />
+      this is test
     </div>
   );
 }
