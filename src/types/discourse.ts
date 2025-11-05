@@ -21,6 +21,7 @@ export interface DiscoursePoster {
 export interface DiscourseTopic {
   id: number;
   title: string;
+  fancy_title?: string;
   slug: string;
   posts_count: number;
   reply_count: number;
@@ -46,6 +47,23 @@ export interface DiscourseTopic {
   category_id: number;
   featured_link: string | null;
   posters: DiscoursePoster[];
+  excerpt?: string; // متن خلاصه شده تاپیک
+}
+
+export interface DiscourseTag {
+  id: string;
+  text: string;
+  name: string;
+  topic_count: number;
+  pm_topic_count?: number;
+  staff_topic_count?: number;
+  description?: string;
+  description_text?: string;
+  description_excerpt?: string;
+}
+
+export interface DiscourseTagList {
+  tags: DiscourseTag[];
 }
 
 export interface DiscourseCategory {
@@ -177,4 +195,65 @@ export interface SearchParams {
   q: string;
   page?: number;
   order?: string;
+}
+
+export interface DiscoursePost {
+  id: number;
+  name: string;
+  username: string;
+  avatar_template: string;
+  created_at: string;
+  cooked: string;
+  post_number: number;
+  post_type: number;
+  updated_at: string;
+  reply_count: number;
+  reply_to_post_number: number | null;
+  quote_count: number;
+  incoming_link_count: number;
+  reads: number;
+  readers_count: number;
+  score: number;
+  yours: boolean;
+  topic_id: number;
+  topic_slug: string;
+  display_username: string;
+  primary_group_name: string | null;
+  flair_name: string | null;
+  flair_url: string | null;
+  flair_bg_color: string | null;
+  flair_color: string | null;
+  version: number;
+  can_edit: boolean;
+  can_delete: boolean;
+  can_recover: boolean;
+  can_see_hidden_post: boolean;
+  can_wiki: boolean;
+  can_view_edit_history: boolean;
+  wiki: boolean;
+  like_count: number;
+  can_accept_answer: boolean;
+  can_unaccept_answer: boolean;
+  accepted_answer: boolean;
+  user_deleted: boolean;
+  via_email: boolean;
+  actions_summary: Array<{
+    id: number;
+    count: number;
+    hidden: boolean;
+    can_act: boolean;
+  }>;
+  moderator: boolean;
+  admin: boolean;
+  staff: boolean;
+  user_id: number;
+  hidden: boolean;
+  trust_level: number;
+  deleted_at: string | null;
+  edit_reason: string | null;
+  reply_to_user?: {
+    username: string;
+    name: string | null;
+    avatar_template: string;
+  };
 }

@@ -28,19 +28,25 @@ export function CategoryTabs({
   return (
     <div className="mb-6 mt-1">
       <TabList>
-        <Tab
+        {/* <Tab
           id="all"
           label="همه تاپیک‌ها"
           isActive={activeCategoryId === null}
           onClick={() => onCategoryChange(null)}
-        />
+        /> */}
         {categories.map((category) => (
           <Tab
             key={category.id}
             id={String(category.id)}
             label={category.name}
             isActive={activeCategoryId === category.id}
-            onClick={() => onCategoryChange(category.id)}
+            onClick={() => {
+              if (activeCategoryId === category.id) {
+                onCategoryChange(null);
+              } else {
+                onCategoryChange(category.id);
+              }
+            }}
           />
         ))}
       </TabList>

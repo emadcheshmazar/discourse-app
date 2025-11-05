@@ -3,29 +3,25 @@ import { LoadingSpinner } from "./LoadingSpinner";
 import { ErrorMessage } from "./ErrorMessage";
 import type { DiscourseTopic } from "../../types/discourse";
 
-interface TopicListProps {
+interface HorizontalTopicListProps {
   topics: DiscourseTopic[];
   loading: boolean;
   error: string | null;
   onTopicClick?: (topic: DiscourseTopic) => void;
   onRetry?: () => void;
   emptyMessage?: string;
-  limit?: number;
-  offset?: number;
-  styleMode?: number; // استایل مود: 1, 2, 3, ...
+  styleMode?: number;
 }
 
-export function TopicList({
+export function HorizontalTopicList({
   topics,
   loading,
   error,
   onTopicClick,
   onRetry,
   emptyMessage = "هیچ تاپیکی یافت نشد.",
-  limit,
-  offset,
-  styleMode = 1, // پیش‌فرض: استایل مود 1
-}: TopicListProps) {
+  styleMode = 1,
+}: HorizontalTopicListProps) {
   if (loading) {
     return (
       <div className="flex justify-center py-8">
@@ -46,27 +42,18 @@ export function TopicList({
     );
   }
 
-  const displayTopics =
-    limit && offset !== undefined
-      ? topics.slice(offset, offset + limit)
-      : topics;
-
-  // کلاس‌های grid بر اساس styleMode
-  const gridClasses =
-    styleMode === 2
-      ? "topic-list-style-2"
-      : "grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1";
-
   return (
-    <div className={gridClasses}>
-      {displayTopics.map((topic) => (
-        <TopicCard
-          key={topic.id}
-          topic={topic}
-          onClick={onTopicClick}
-          styleMode={styleMode}
-        />
-      ))}
+    <div className="horizontal-topic-list-wrapper">
+      <div className="horizontal-topic-list-container">
+        {topics.map((topic) => (
+          <TopicCard
+            key={topic.id}
+            topic={topic}
+            onClick={onTopicClick}
+            styleMode={styleMode}
+          />
+        ))}
+      </div>
     </div>
   );
 }

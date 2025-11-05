@@ -3041,6 +3041,226 @@ ul {
   }
 }
 
+/* Topic Detail Post Content Styles */
+.topic-post-content {
+  color: var(--bm-color-content);
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.topic-post-content p {
+  margin: 1rem 0;
+}
+
+.topic-post-content h1,
+.topic-post-content h2,
+.topic-post-content h3,
+.topic-post-content h4,
+.topic-post-content h5,
+.topic-post-content h6 {
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+  color: var(--bm-color-content);
+}
+
+.topic-post-content h1 {
+  font-size: var(--bm-font-size-h-lg);
+  line-height: var(--bm-font-line-height-h-lg);
+}
+
+.topic-post-content h2 {
+  font-size: var(--bm-font-size-h-md);
+  line-height: var(--bm-font-line-height-h-md);
+}
+
+.topic-post-content h3 {
+  font-size: var(--bm-font-size-h-sm);
+  line-height: var(--bm-font-line-height-h-sm);
+}
+
+.topic-post-content ul,
+.topic-post-content ol {
+  margin: 1rem 0;
+  padding-right: 2rem;
+}
+
+.topic-post-content li {
+  margin: 0.5rem 0;
+}
+
+.topic-post-content blockquote {
+  border-right: 4px solid var(--bm-color-line);
+  padding-right: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--bm-color-content-subdued);
+}
+
+.topic-post-content code {
+  background-color: var(--bm-color-surface-subdued);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--bm-radius-sm);
+  font-family: var(--bm-font-family-mono);
+  font-size: 0.9em;
+}
+
+.topic-post-content pre {
+  background-color: var(--bm-color-surface-subdued);
+  padding: 1rem;
+  border-radius: var(--bm-radius-base);
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.topic-post-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.topic-post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--bm-radius-base);
+  margin: 1rem 0;
+}
+
+.topic-post-content a {
+  color: var(--bm-color-interactive);
+  text-decoration: underline;
+}
+
+.topic-post-content a:hover {
+  color: var(--bm-color-interactive-hovered);
+}
+
+.topic-post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.topic-post-content table th,
+.topic-post-content table td {
+  padding: 0.5rem;
+  border: 1px solid var(--bm-color-line);
+}
+
+.topic-post-content table th {
+  background-color: var(--bm-color-surface-subdued);
+  font-weight: 600;
+}
+
+/* Topic Card Style Mode 2 */
+.topic-list-style-2 {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.25rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .topic-list-style-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .topic-list-style-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Horizontal Topic List */
+.horizontal-topic-list-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.horizontal-topic-list-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 4px;
+  padding: 0.5rem 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.horizontal-topic-list-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-topic-list-container > * {
+  flex-shrink: 0;
+}
+
+.topic-card-style-2 {
+  width: 400px;
+  height: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  background-color: #405b76;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px 45px 0;
+  border-radius: var(--bm-radius-base);
+  box-shadow: var(--bm-shadow-card);
+  cursor: pointer;
+}
+
+.topic-card-style-2-image {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 0;
+}
+
+.topic-card-style-2-image img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--bm-radius-base);
+  display: block;
+}
+
+.topic-card-style-2-image svg {
+  border-radius: var(--bm-radius-base);
+  display: block;
+}
+
+.topic-card-style-2-title {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.topic-card-style-2-title h3:last-child {
+  margin-bottom: 0;
+}
+
+.topic-card-style-2-description {
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: right;
+  width: 100%;
+}
+
 /* Footer Styles */
 .footer-links {
   list-style: none;

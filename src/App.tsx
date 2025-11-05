@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import TopicDetail from "./pages/TopicDetail";
 import { Header } from "./components/layout/Header";
 import "./App.css";
 
@@ -14,6 +15,11 @@ function App() {
         <main>
           <Routes>
             <Route path="/discourse-landing-build/" element={<Home />} />
+            <Route
+              path="/discourse-landing-build/topic/:topicId"
+              element={<TopicDetail />}
+            />
+            <Route path="/topic/:topicId" element={<TopicDetail />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </main>

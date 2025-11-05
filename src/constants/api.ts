@@ -8,6 +8,8 @@ export const ENDPOINTS = {
   SITE: "/site.json",
   LATEST: "/latest.json",
   CATEGORIES: "/categories.json",
+  TAGS: "/tags.json",
+  TAG_TOPICS: "/tag/{tag_name}.json",
   SEARCH: "/search.json",
   CURRENT_USER: "/session/current.json",
   USER: "/users/{username}.json",
