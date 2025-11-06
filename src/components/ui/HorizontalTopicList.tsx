@@ -1,5 +1,5 @@
 import { TopicCard } from "./TopicCard";
-import { LoadingSpinner } from "./LoadingSpinner";
+import { TopicCardSkeleton } from "./TopicCardSkeleton";
 import { ErrorMessage } from "./ErrorMessage";
 import type { DiscourseTopic } from "../../types/discourse";
 
@@ -24,8 +24,10 @@ export function HorizontalTopicList({
 }: HorizontalTopicListProps) {
   if (loading) {
     return (
-      <div className="flex justify-center py-8">
-        <LoadingSpinner size="lg" />
+      <div className="horizontal-topic-list-wrapper w-full">
+        <div className="horizontal-topic-list-container" style={{ gap: "4px" }}>
+          <TopicCardSkeleton styleMode={styleMode} count={6} />
+        </div>
       </div>
     );
   }

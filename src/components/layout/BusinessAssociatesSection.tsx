@@ -1,70 +1,72 @@
-import { ImageBackgroundCard } from "../ui/ImageBackgroundCard";
-
-interface CardData {
-  id: string;
-  imageUrl: string;
-}
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { TopicList } from "../ui/TopicList";
+import type { DiscourseTopic } from "../../types/discourse";
 
 interface BusinessAssociatesSectionProps {
   className?: string;
 }
 
-const defaultCards: CardData[] = [
-  {
-    id: "1",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/AyTvce2QbxQZQA03VSihC?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "2",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/jPmdKeMc3XtPqyGNhfTb4?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "3",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/T3WVtUyBhlcmgfAO4lw94?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "4",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/3YqE5aKXcUrE9JIh88XDe?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "5",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/NDmuAcnrcehanHFwvdAfj?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "6",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/cd97Szkkt38LKL9I0xOnk?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "7",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/KhQ25CpYnCpcbELAXcpqD?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "8",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/RqobkXFQRa2Sgao6T5a4B?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "9",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/FtYTNxyalphW4VegKamdI?fit=max&w=1000&auto=compress,format",
-  },
-  {
-    id: "10",
-    imageUrl:
-      "https://tribe-s3-production.imgix.net/zw0rrAQcwTVU4vMIJ5W4Z?fit=max&w=1000&auto=compress,format",
-  },
-];
-
 export function BusinessAssociatesSection({
   className = "",
 }: BusinessAssociatesSectionProps) {
+  const navigate = useNavigate();
+  const [topics, setTopics] = useState<DiscourseTopic[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const loadTopics = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const apiBase = import.meta.env.DEV
+        ? "/api/discourse"
+        : "https://aliasysdiscourse.ir";
+
+      // بارگذاری تاپیک‌ها با تگ BusinessAssociates
+      const encodedTagName = encodeURIComponent("businessassociates");
+      const url = `${apiBase}/tag/${encodedTagName}.json`;
+
+      const response = await fetch(url, {
+        method: "GET",
+        mode: import.meta.env.DEV ? "same-origin" : "cors",
+        credentials: "include",
+        headers: {
+          accept: "application/json, text/javascript, */*; q=0.01",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const topicsArray = data?.topic_list?.topics || [];
+      setTopics(topicsArray);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      console.error(
+        "❌ خطا در بارگذاری تاپیک‌های BusinessAssociates:",
+        errorMessage
+      );
+      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadTopics();
+  }, []);
+
+  const handleTopicClick = (topic: DiscourseTopic) => {
+    navigate(`/topic/${topic.id}`);
+  };
+
+  const handleRetry = () => {
+    loadTopics();
+  };
   return (
     <section
       className={`grid w-full grid-cols-1 gap-3 sm:gap-3.5 md:gap-4 lg:gap-5 ${className}`}
@@ -112,29 +114,21 @@ export function BusinessAssociatesSection({
             <div className="space-y-3 sm:space-y-3.5 md:space-y-4 lg:space-y-5">
               <div className="relative">
                 <div
-                  className="overflow-hidden"
+                  className="overflow-hidden mt-[-20px]"
                   style={{
                     marginInline: "-12px -1px",
                     paddingInline: "12px 1px",
                   }}
                 >
-                  <div className="flex items-stretch snap-x h-auto pt-1 pb-4 business-associates-container">
-                    {defaultCards.map((card) => (
-                      <div
-                        key={card.id}
-                        className="snap-start grow-0 shrink-0 min-w-0 flex"
-                      >
-                        <ImageBackgroundCard
-                          imageUrl={card.imageUrl}
-                          aspectRatio="3/2"
-                          blockId={card.id}
-                          roundedBottom={true}
-                          className="flex-shrink-0 sm:rounded-lg h-full transition-all ease-in-out duration-200 justify-start stretch business-associate-card cursor-pointer hover:shadow-card-hovered"
-                          style={{ maxWidth: "300px", minWidth: "300px" }}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  <TopicList
+                    topics={topics}
+                    loading={loading}
+                    error={error}
+                    onTopicClick={handleTopicClick}
+                    onRetry={handleRetry}
+                    emptyMessage="محتوایی برای نمایش وجود ندارد."
+                    styleMode={3}
+                  />
                 </div>
               </div>
             </div>

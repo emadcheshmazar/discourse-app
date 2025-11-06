@@ -229,6 +229,178 @@ export function TopicCard({ topic, onClick, styleMode = 1 }: TopicCardProps) {
     );
   }
 
+  if (styleMode === 4) {
+    // کارت 402x402 - 250px تصویر بالا، باقی متن
+    const imageUrl = (topic as unknown as { image_url: string }).image_url;
+    const firstTag = topic.tags && topic.tags.length > 0 ? topic.tags[0] : null;
+
+    return (
+      <div className="topic-card-style-4" onClick={() => onClick?.(topic)}>
+        {/* Banner عمودی چپ */}
+        {firstTag && (
+          <div className="topic-card-style-4-vertical-banner">
+            <span>{firstTag}</span>
+          </div>
+        )}
+
+        {/* بخش تصویر - 250px */}
+        <div className="topic-card-style-4-image">
+          {imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={topic.title}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.innerHTML = `
+                    <svg width="402" height="250" viewBox="0 0 402 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="402" height="250" fill="#f5f5f5"/>
+                      <rect x="150" y="100" width="102" height="50" rx="2" stroke="#ccc" stroke-width="2" fill="none"/>
+                      <path d="M150 125L201 150L252 125" stroke="#ccc" stroke-width="2" fill="none" stroke-linecap="round"/>
+                      <circle cx="175" cy="115" r="3" fill="#ccc"/>
+                      <circle cx="227" cy="115" r="3" fill="#ccc"/>
+                    </svg>
+                  `;
+                }
+              }}
+            />
+          ) : (
+            <svg
+              width="402"
+              height="250"
+              viewBox="0 0 402 250"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="402" height="250" fill="#f5f5f5" />
+              <rect
+                x="150"
+                y="100"
+                width="102"
+                height="50"
+                rx="2"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+              />
+              <path
+                d="M150 125L201 150L252 125"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+              />
+              <circle cx="175" cy="115" r="3" fill="#ccc" />
+              <circle cx="227" cy="115" r="3" fill="#ccc" />
+            </svg>
+          )}
+        </div>
+
+        {/* بخش متن */}
+        <div className="topic-card-style-4-content">
+          <h3 className="topic-card-style-4-title">{topic.title}</h3>
+          {topic.excerpt && (
+            <div className="topic-card-style-4-excerpt">
+              {topic.excerpt
+                .replace(/&amp;/g, "&")
+                .replace(/&lt;/g, "<")
+                .replace(/&gt;/g, ">")
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'")
+                .replace(/&hellip;/g, "...")
+                .replace(/<[^>]*>/g, "")
+                .trim()}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (styleMode === 5) {
+    // کارت 402x402 - 250px تصویر بالا، باقی متن (بدون بنر تگ)
+    const imageUrl = (topic as unknown as { image_url: string }).image_url;
+
+    return (
+      <div className="topic-card-style-4" onClick={() => onClick?.(topic)}>
+        {/* بخش تصویر - 250px */}
+        <div className="topic-card-style-4-image">
+          {imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={topic.title}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
+                const parent = target.parentElement;
+                if (parent) {
+                  parent.innerHTML = `
+                    <svg width="402" height="250" viewBox="0 0 402 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="402" height="250" fill="#f5f5f5"/>
+                      <rect x="150" y="100" width="102" height="50" rx="2" stroke="#ccc" stroke-width="2" fill="none"/>
+                      <path d="M150 125L201 150L252 125" stroke="#ccc" stroke-width="2" fill="none" stroke-linecap="round"/>
+                      <circle cx="175" cy="115" r="3" fill="#ccc"/>
+                      <circle cx="227" cy="115" r="3" fill="#ccc"/>
+                    </svg>
+                  `;
+                }
+              }}
+            />
+          ) : (
+            <svg
+              width="402"
+              height="250"
+              viewBox="0 0 402 250"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="402" height="250" fill="#f5f5f5" />
+              <rect
+                x="150"
+                y="100"
+                width="102"
+                height="50"
+                rx="2"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+              />
+              <path
+                d="M150 125L201 150L252 125"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+              />
+              <circle cx="175" cy="115" r="3" fill="#ccc" />
+              <circle cx="227" cy="115" r="3" fill="#ccc" />
+            </svg>
+          )}
+        </div>
+
+        {/* بخش متن */}
+        <div className="topic-card-style-4-content">
+          <h3 className="topic-card-style-4-title">{topic.title}</h3>
+          {topic.excerpt && (
+            <div className="topic-card-style-4-excerpt">
+              {topic.excerpt
+                .replace(/&amp;/g, "&")
+                .replace(/&lt;/g, "<")
+                .replace(/&gt;/g, ">")
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'")
+                .replace(/&hellip;/g, "...")
+                .replace(/<[^>]*>/g, "")
+                .trim()}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className="border border-card flex flex-col text-content-subdued transition duration-200 justify-between bg-surface shadow-card sm:rounded-card cursor-pointer hover:shadow-card-hovered transition-all ease-in-out duration-200 justify-start stretch"

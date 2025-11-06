@@ -1,5 +1,5 @@
 import { TopicCard } from "./TopicCard";
-import { LoadingSpinner } from "./LoadingSpinner";
+import { TopicCardSkeleton } from "./TopicCardSkeleton";
 import { ErrorMessage } from "./ErrorMessage";
 import type { DiscourseTopic } from "../../types/discourse";
 
@@ -27,9 +27,31 @@ export function TopicList({
   styleMode = 1, // پیش‌فرض: استایل مود 1
 }: TopicListProps) {
   if (loading) {
+    const displayCount = limit || 6;
+
+    // برای styleMode 3، 4 و 5، اسکلت افقی با اسکرول
+    if (styleMode === 3 || styleMode === 4 || styleMode === 5) {
+      return (
+        <div className="horizontal-topic-list-wrapper">
+          <div
+            className="horizontal-topic-list-container"
+            style={{ gap: "4px" }}
+          >
+            <TopicCardSkeleton styleMode={styleMode} count={displayCount} />
+          </div>
+        </div>
+      );
+    }
+
+    // کلاس‌های grid بر اساس styleMode
+    const gridClasses =
+      styleMode === 2
+        ? "topic-list-style-2"
+        : "grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1";
+
     return (
-      <div className="flex justify-center py-8">
-        <LoadingSpinner size="lg" />
+      <div className={gridClasses}>
+        <TopicCardSkeleton styleMode={styleMode} count={displayCount} />
       </div>
     );
   }
@@ -50,6 +72,24 @@ export function TopicList({
     limit && offset !== undefined
       ? topics.slice(offset, offset + limit)
       : topics;
+
+  // برای styleMode 3، 4 و 5، نمایش افقی با اسکرول
+  if (styleMode === 3 || styleMode === 4 || styleMode === 5) {
+    return (
+      <div className="horizontal-topic-list-wrapper">
+        <div className="horizontal-topic-list-container" style={{ gap: "4px" }}>
+          {displayTopics.map((topic) => (
+            <TopicCard
+              key={topic.id}
+              topic={topic}
+              onClick={onTopicClick}
+              styleMode={styleMode}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   // کلاس‌های grid بر اساس styleMode
   const gridClasses =

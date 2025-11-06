@@ -28,12 +28,12 @@ export function TagTabs({
   return (
     <div className="mb-6 mt-1">
       <TabList>
-        <Tab
+        {/* <Tab
           id="all"
           label="همه"
           isActive={activeTagName === null}
           onClick={() => onTagChange(null)}
-        />
+        /> */}
         {tags.map((tag) => (
           <Tab
             key={tag.id}
