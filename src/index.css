@@ -3466,3 +3466,25 @@ ul {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Grid برای styleMode 1 - ریسپانسیو: موبایل 1، تبلت 3، دسکتاپ 4 */
+.topic-list-style-1 {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.25rem;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+@media (min-width: 768px) {
+  .topic-list-style-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .topic-list-style-1 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

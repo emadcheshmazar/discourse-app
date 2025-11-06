@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <header className="header-base">
-      <div className="w-full flex justify-start items-center h-12 px-4">
-        <a
+      <div className="w-full flex justify-start items-center h-12 px-4 gap-6">
+        <Link
           className="cursor-pointer rounded-none transition duration-200 focus:outline-none focus-visible:ring block logo max-w-[var(--c-header-logo-max-width)]"
-          href="/"
+          to="/"
         >
           <div className="block sm:hidden">
             <img
@@ -26,7 +28,13 @@ export function Header() {
               />
             </div>
           </div>
-        </a>
+        </Link>
+        <Link
+          to="/aliasys-explore"
+          className="text-[#fff] font-bold text-center no-underline hover:opacity-80 transition-opacity"
+        >
+          آلیاس اکسپلور
+        </Link>
       </div>
     </header>
   );

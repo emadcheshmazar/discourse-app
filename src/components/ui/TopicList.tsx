@@ -95,6 +95,8 @@ export function TopicList({
   const gridClasses =
     styleMode === 2
       ? "topic-list-style-2"
+      : styleMode === 1
+      ? "topic-list-style-1"
       : "grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1";
 
   return (

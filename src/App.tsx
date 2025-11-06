@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TopicDetail from "./pages/TopicDetail";
+import AliasysExplore from "./pages/AliasysExplore";
 import { Header } from "./components/layout/Header";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
               element={<TopicDetail />}
             />
             <Route path="/topic/:topicId" element={<TopicDetail />} />
+            <Route path="/aliasys-explore" element={<AliasysExplore />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </main>
