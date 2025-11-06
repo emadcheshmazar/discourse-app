@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { TagTabs } from "../components/layout/TagTabs";
 import { TopicList } from "../components/ui/TopicList";
 import type { DiscourseTopic, DiscourseTag } from "../types/discourse";
+import { AliasysExploreBannerSection } from "../components/layout/AliasysExploreBannerSection";
 
 // Whitelist برای تگ‌های مجاز
 const tagWhitelist: string[] = [
@@ -20,6 +21,8 @@ export default function AliasysExplore() {
   const [loading, setLoading] = useState(false);
   const [tagsLoading, setTagsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [memberCount, setMemberCount] = useState<number>(0);
+  const [postCount, setPostCount] = useState<number>(0);
 
   const loadTags = async () => {
     try {
@@ -149,6 +152,41 @@ export default function AliasysExplore() {
     loadTopics(activeTagName);
   };
 
+  const loadSiteStats = async () => {
+    try {
+      const apiBase = import.meta.env.DEV
+        ? "/api/discourse"
+        : "https://aliasysdiscourse.ir";
+
+      const response = await fetch(`${apiBase}/site.json`, {
+        method: "GET",
+        mode: import.meta.env.DEV ? "same-origin" : "cors",
+        credentials: "include",
+        headers: {
+          accept: "application/json, text/javascript, */*; q=0.01",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      // Discourse site.json typically has stats in different places
+      // Try common locations: about.stats, stats, or direct properties
+      const stats = data.about?.stats || data.stats || {};
+      setMemberCount(
+        stats.users || data.users || data.about?.users || data.user_count || 0
+      );
+      setPostCount(
+        stats.posts || data.posts || data.about?.posts || data.post_count || 0
+      );
+    } catch (err) {
+      console.error("❌ خطا در بارگذاری آمار سایت:", err);
+      // Keep default values (0) on error
+    }
+  };
+
   const getFilteredTags = (): DiscourseTag[] => {
     if (!tagWhitelist || tagWhitelist.length === 0) {
       return tags;
@@ -158,6 +196,7 @@ export default function AliasysExplore() {
 
   useEffect(() => {
     loadTags();
+    loadSiteStats();
   }, []);
 
   useEffect(() => {
@@ -169,6 +208,10 @@ export default function AliasysExplore() {
 
   return (
     <div className="w-full max-w-[1400px] mx-auto px-2 md:px-4 lg:px-6 py-6">
+      <AliasysExploreBannerSection
+        memberCount={memberCount}
+        postCount={postCount}
+      />
       <TagTabs
         tags={getFilteredTags()}
         activeTagName={activeTagName}
