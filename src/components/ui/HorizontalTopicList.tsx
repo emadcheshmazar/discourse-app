@@ -19,7 +19,7 @@ export function HorizontalTopicList({
   error,
   onTopicClick,
   onRetry,
-  emptyMessage = "هیچ تاپیکی یافت نشد.",
+  emptyMessage = "هیچ پستی یافت نشد.",
   styleMode = 1,
 }: HorizontalTopicListProps) {
   if (loading) {

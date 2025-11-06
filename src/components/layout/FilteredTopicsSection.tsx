@@ -15,7 +15,7 @@ export function FilteredTopicsSection({
   className = "",
   tagWhitelist = undefined,
   styleMode = 2,
-  emptyMessage = "هیچ تاپیکی یافت نشد.",
+  emptyMessage = "هیچ پستی یافت نشد.",
 }: FilteredTopicsSectionProps) {
   const navigate = useNavigate();
   const [topics, setTopics] = useState<DiscourseTopic[]>([]);
@@ -118,7 +118,7 @@ export function FilteredTopicsSection({
 
           const results = await Promise.all(promises);
 
-          // همه تاپیک‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
+          // همه پست‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
           const allTopics = results.flat();
           const uniqueTopicsMap = new Map<number, DiscourseTopic>();
           allTopics.forEach((topic) => {
@@ -152,7 +152,7 @@ export function FilteredTopicsSection({
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
       console.error("❌ Error loading topics:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

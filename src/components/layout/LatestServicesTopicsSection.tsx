@@ -24,7 +24,7 @@ export function LatestServicesTopicsSection({
         ? "/api/discourse"
         : "https://aliasysdiscourse.ir";
 
-      // بارگذاری تاپیک‌ها با تگ news
+      // بارگذاری پست‌ها با تگ news
       const encodedTagName = encodeURIComponent("news");
       const url = `${apiBase}/tag/${encodedTagName}.json`;
 
@@ -46,8 +46,8 @@ export function LatestServicesTopicsSection({
       setNewsTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error("❌ خطا در بارگذاری تاپیک‌های news:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌های news:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }
@@ -74,7 +74,7 @@ export function LatestServicesTopicsSection({
         error={error}
         onTopicClick={handleTopicClick}
         onRetry={handleRetry}
-        emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
+        emptyMessage="هیچ پستی در این کتگوری یافت نشد."
         styleMode={1}
       />
     </div>

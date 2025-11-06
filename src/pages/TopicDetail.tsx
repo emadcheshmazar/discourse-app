@@ -1,9 +1,30 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { LoadingSpinner } from "../components/ui/LoadingSpinner";
 import { ErrorMessage } from "../components/ui/ErrorMessage";
 import type { DiscoursePost } from "../types/discourse";
 import "./TopicDetail.css";
+import { NewsHeaderSection } from "../components/layout/LatestNewsSection";
+
+interface SuggestedTopic {
+  id: number;
+  title: string;
+  fancy_title: string;
+  slug: string;
+  posts_count: number;
+  reply_count: number;
+  image_url: string | null;
+  excerpt: string;
+  like_count: number;
+  views: number;
+  tags: string[];
+  thumbnails?: Array<{
+    max_width: number | null;
+    max_height: number | null;
+    width: number;
+    height: number;
+    url: string;
+  }>;
+}
 
 interface TopicDetailResponse {
   post_stream: {
@@ -20,12 +41,18 @@ interface TopicDetailResponse {
   image_url: string | null;
   category_id: number;
   tags: string[];
+  tags_descriptions?: Record<string, string>;
   like_count: number;
   views: number;
+  word_count?: number;
+  participant_count?: number;
   closed: boolean;
   archived: boolean;
   pinned: boolean;
   visible: boolean;
+  bookmarked?: boolean;
+  can_vote?: boolean;
+  vote_count?: number;
   can_edit: boolean;
   can_delete: boolean;
   can_recover: boolean;
@@ -36,6 +63,19 @@ interface TopicDetailResponse {
   can_create_post: boolean;
   can_reply_as_new_topic: boolean;
   can_flag_topic: boolean;
+  actions_summary?: Array<{
+    id: number;
+    count: number;
+    hidden: boolean;
+    can_act: boolean;
+  }>;
+  thumbnails?: Array<{
+    max_width: number | null;
+    max_height: number | null;
+    width: number;
+    height: number;
+    url: string;
+  }>;
   participants: Array<{
     id: number;
     username: string;
@@ -51,12 +91,14 @@ interface TopicDetailResponse {
     moderator: boolean;
     trust_level: number;
   }>;
+  suggested_topics?: SuggestedTopic[];
   details: {
     can_edit: boolean;
     can_delete: boolean;
     can_create_post: boolean;
     can_reply_as_new_topic: boolean;
     can_flag_topic: boolean;
+    notification_level?: number;
     created_by: {
       id: number;
       username: string;
@@ -69,6 +111,21 @@ interface TopicDetailResponse {
       name: string | null;
       avatar_template: string;
     };
+    participants?: Array<{
+      id: number;
+      username: string;
+      name: string | null;
+      avatar_template: string;
+      post_count: number;
+      primary_group_name: string | null;
+      flair_name: string | null;
+      flair_url: string | null;
+      flair_color: string | null;
+      flair_bg_color: string | null;
+      admin: boolean;
+      moderator: boolean;
+      trust_level: number;
+    }>;
   };
 }
 
@@ -82,7 +139,7 @@ export default function TopicDetail() {
 
   useEffect(() => {
     if (!topicId) {
-      setError("شناسه تاپیک مشخص نشده است");
+      setError("شناسه پست مشخص نشده است");
       setLoading(false);
       return;
     }
@@ -117,7 +174,7 @@ export default function TopicDetail() {
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : String(err);
         console.error("❌ Error loading topic:", errorMessage);
-        setError(`خطا در بارگذاری تاپیک: ${errorMessage}`);
+        setError(`خطا در بارگذاری پست: ${errorMessage}`);
       } finally {
         setLoading(false);
       }
@@ -233,8 +290,246 @@ export default function TopicDetail() {
   if (loading) {
     return (
       <div className="topic-detail-page">
-        <div className="center-inline">
-          <LoadingSpinner size="lg" />
+        <div className="td-layout">
+          {/* بخش 40 درصد - سمت چپ */}
+          <div className="td-col td-col-left">
+            {/* سکشن 1: تصویر اصلی پست */}
+            <div className="td-image td-skeleton-image"></div>
+
+            {/* سکشن 2: باکس تاریخ، تایتل و کتگوری */}
+            <div className="td-card">
+              {/* تاریخ */}
+              <div
+                className="td-skeleton-line"
+                style={{ width: "40%", marginBottom: "8px" }}
+              ></div>
+
+              {/* تایتل */}
+              <div
+                className="td-skeleton-line"
+                style={{ width: "90%", height: "24px", marginBottom: "8px" }}
+              ></div>
+              <div
+                className="td-skeleton-line"
+                style={{ width: "70%", height: "24px", marginBottom: "16px" }}
+              ></div>
+
+              {/* کتگوری */}
+              <div
+                className="td-skeleton-line"
+                style={{ width: "50%", marginBottom: "12px" }}
+              ></div>
+
+              {/* وضعیت */}
+              <div
+                style={{ display: "flex", gap: "6px", marginBottom: "16px" }}
+              >
+                <div className="td-skeleton-badge"></div>
+                <div className="td-skeleton-badge"></div>
+              </div>
+
+              {/* آمار */}
+              <div className="td-stats">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="td-stat-item">
+                    <div className="td-skeleton-icon"></div>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "60px" }}
+                    ></div>
+                  </div>
+                ))}
+              </div>
+
+              {/* تاریخ آخرین پست */}
+              <div
+                className="td-skeleton-line"
+                style={{ width: "60%", marginTop: "16px" }}
+              ></div>
+
+              {/* اطلاعات کاربر */}
+              <div
+                style={{
+                  marginTop: "16px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "12px" }}
+                >
+                  <div className="td-skeleton-avatar"></div>
+                  <div style={{ flex: 1 }}>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "40%", marginBottom: "4px" }}
+                    ></div>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "60%" }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* شرکت‌کنندگان */}
+              <div style={{ marginTop: "16px" }}>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "50%", marginBottom: "12px" }}
+                ></div>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div key={i} className="td-skeleton-avatar-small"></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* بخش 60 درصد - سمت راست */}
+          <div className="td-col td-col-right">
+            {/* سکشن 1: باکس Aliasys Solutions */}
+            <div className="td-card">
+              <div
+                className="td-skeleton-line"
+                style={{ width: "60%", height: "32px" }}
+              ></div>
+            </div>
+
+            {/* سکشن 2: باکس سفید با تگ‌ها و محتوا */}
+            <div className="td-card td-card-white">
+              {/* دکمه بازگشت */}
+              <div
+                className="td-skeleton-line"
+                style={{ width: "40px", height: "20px", marginBottom: "8px" }}
+              ></div>
+
+              {/* تگ‌ها */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: "8px",
+                  marginBottom: "16px",
+                  flexWrap: "wrap",
+                }}
+              >
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="td-skeleton-tag"></div>
+                ))}
+              </div>
+
+              {/* Actions Summary */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: "12px",
+                  marginBottom: "16px",
+                  flexWrap: "wrap",
+                }}
+              >
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="td-skeleton-line"
+                    style={{ width: "80px" }}
+                  ></div>
+                ))}
+              </div>
+
+              {/* محتوای پست */}
+              <div style={{ marginTop: "16px" }}>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "100%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "100%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "95%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "100%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "90%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "85%", marginBottom: "24px" }}
+                ></div>
+
+                {/* تصویر */}
+                <div
+                  className="td-skeleton-image-content"
+                  style={{ marginBottom: "24px" }}
+                ></div>
+
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "100%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "100%", marginBottom: "12px" }}
+                ></div>
+                <div
+                  className="td-skeleton-line"
+                  style={{ width: "92%", marginBottom: "12px" }}
+                ></div>
+              </div>
+            </div>
+
+            {/* کامنت‌ها */}
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+            >
+              {[1, 2].map((i) => (
+                <div key={i} className="td-comment-card">
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    <div className="td-skeleton-avatar-square"></div>
+                    <div style={{ flex: 1 }}>
+                      <div
+                        className="td-skeleton-line"
+                        style={{ width: "30%", marginBottom: "4px" }}
+                      ></div>
+                      <div
+                        className="td-skeleton-line"
+                        style={{ width: "50%" }}
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "100%", marginBottom: "8px" }}
+                    ></div>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "95%", marginBottom: "8px" }}
+                    ></div>
+                    <div
+                      className="td-skeleton-line"
+                      style={{ width: "90%" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -251,7 +546,7 @@ export default function TopicDetail() {
   if (!topic) {
     return (
       <div className="topic-detail-page">
-        <p className="muted center-text">تاپیک یافت نشد.</p>
+        <p className="muted center-text">پست یافت نشد.</p>
       </div>
     );
   }
@@ -330,6 +625,290 @@ export default function TopicDetail() {
                 <span className="td-meta-strong">#{topic.category_id}</span>
               </div>
             )}
+
+            {/* وضعیت پست */}
+            <div className="td-status-badges">
+              {topic.pinned && (
+                <span className="td-status-badge td-status-pinned">
+                  📌 پین شده
+                </span>
+              )}
+              {topic.closed && (
+                <span className="td-status-badge td-status-closed">
+                  🔒 بسته شده
+                </span>
+              )}
+              {topic.archived && (
+                <span className="td-status-badge td-status-archived">
+                  📦 آرشیو شده
+                </span>
+              )}
+              {topic.bookmarked && (
+                <span className="td-status-badge td-status-bookmarked">
+                  ⭐ بوکمارک شده
+                </span>
+              )}
+            </div>
+
+            {/* آمار پست */}
+            <div className="td-stats">
+              <div className="td-stat-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>{topic.views || 0} بازدید</span>
+              </div>
+              <div className="td-stat-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>{topic.posts_count || 0} پست</span>
+              </div>
+              <div className="td-stat-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="9" y1="10" x2="15" y2="10"></line>
+                </svg>
+                <span>{topic.reply_count || 0} پاسخ</span>
+              </div>
+              <div className="td-stat-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                <span>{topic.like_count || 0} لایک</span>
+              </div>
+              {topic.participant_count !== undefined && (
+                <div className="td-stat-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>{topic.participant_count} شرکت‌کننده</span>
+                </div>
+              )}
+              {topic.word_count !== undefined && (
+                <div className="td-stat-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>{topic.word_count} کلمه</span>
+                </div>
+              )}
+              {topic.vote_count !== undefined && topic.vote_count > 0 && (
+                <div className="td-stat-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M7 13l3 3 7-7"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>{topic.vote_count} رای</span>
+                </div>
+              )}
+            </div>
+
+            {/* تاریخ آخرین پست */}
+            {topic.last_posted_at && (
+              <div className="td-meta">
+                <span>آخرین پست: </span>
+                <span className="td-meta-strong">
+                  {new Date(topic.last_posted_at).toLocaleDateString("fa-IR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </span>
+              </div>
+            )}
+
+            {/* اطلاعات سازنده و آخرین پست‌کننده */}
+            <div className="td-user-info">
+              {topic.details?.created_by && (
+                <div className="td-user-item">
+                  <div className="td-user-avatar-small">
+                    {getAvatarUrl(
+                      topic.details.created_by.avatar_template,
+                      32
+                    ) ? (
+                      <img
+                        src={
+                          getAvatarUrl(
+                            topic.details.created_by.avatar_template,
+                            32
+                          )!
+                        }
+                        alt={
+                          topic.details.created_by.name ||
+                          topic.details.created_by.username
+                        }
+                      />
+                    ) : (
+                      <span>
+                        {getInitial(
+                          topic.details.created_by.name,
+                          topic.details.created_by.username
+                        )}
+                      </span>
+                    )}
+                  </div>
+                  <div className="td-user-details">
+                    <div className="td-user-label">سازنده:</div>
+                    <div className="td-user-name">
+                      {topic.details.created_by.name ||
+                        topic.details.created_by.username}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {topic.details?.last_poster &&
+                topic.details.last_poster.id !==
+                  topic.details?.created_by?.id && (
+                  <div className="td-user-item">
+                    <div className="td-user-avatar-small">
+                      {getAvatarUrl(
+                        topic.details.last_poster.avatar_template,
+                        32
+                      ) ? (
+                        <img
+                          src={
+                            getAvatarUrl(
+                              topic.details.last_poster.avatar_template,
+                              32
+                            )!
+                          }
+                          alt={
+                            topic.details.last_poster.name ||
+                            topic.details.last_poster.username
+                          }
+                        />
+                      ) : (
+                        <span>
+                          {getInitial(
+                            topic.details.last_poster.name,
+                            topic.details.last_poster.username
+                          )}
+                        </span>
+                      )}
+                    </div>
+                    <div className="td-user-details">
+                      <div className="td-user-label">آخرین پست‌کننده:</div>
+                      <div className="td-user-name">
+                        {topic.details.last_poster.name ||
+                          topic.details.last_poster.username}
+                      </div>
+                    </div>
+                  </div>
+                )}
+            </div>
+
+            {/* شرکت‌کنندگان */}
+            {(topic.details?.participants &&
+              topic.details.participants.length > 0) ||
+            (topic.participants && topic.participants.length > 0) ? (
+              <div className="td-participants">
+                <div className="td-participants-title">
+                  شرکت‌کنندگان (
+                  {topic.participant_count ||
+                    (topic.details?.participants || topic.participants || [])
+                      .length}
+                  )
+                </div>
+                <div className="td-participants-list">
+                  {(topic.details?.participants || topic.participants || [])
+                    .slice(0, 10)
+                    .map((participant) => {
+                      const avatarUrl = getAvatarUrl(
+                        participant.avatar_template,
+                        32
+                      );
+                      const initial = getInitial(
+                        participant.name,
+                        participant.username
+                      );
+                      return (
+                        <div
+                          key={participant.id}
+                          className="td-participant-item"
+                          title={participant.name || participant.username}
+                        >
+                          {avatarUrl ? (
+                            <img
+                              src={avatarUrl}
+                              alt={participant.name || participant.username}
+                            />
+                          ) : (
+                            <span>{initial}</span>
+                          )}
+                        </div>
+                      );
+                    })}
+                  {(topic.details?.participants || topic.participants || [])
+                    .length > 10 && (
+                    <div className="td-participant-more">
+                      +
+                      {(topic.details?.participants || topic.participants || [])
+                        .length - 10}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
 
@@ -358,8 +937,18 @@ export default function TopicDetail() {
             {topic.tags && topic.tags.length > 0 && (
               <div className="td-tags">
                 {topic.tags.map((tag) => (
-                  <span key={tag} className="td-tag">
+                  <span
+                    key={tag}
+                    className="td-tag"
+                    title={topic.tags_descriptions?.[tag] || undefined}
+                  >
                     {tag}
+                    {topic.tags_descriptions?.[tag] && (
+                      <span className="td-tag-description">
+                        {" "}
+                        - {topic.tags_descriptions[tag]}
+                      </span>
+                    )}
                   </span>
                 ))}
               </div>
@@ -448,6 +1037,107 @@ export default function TopicDetail() {
                   </div>
                 );
               })}
+            </div>
+          )}
+
+          {/* پست‌های پیشنهادی */}
+          {topic.suggested_topics && topic.suggested_topics.length > 0 && (
+            <div className="td-suggested-topics mt-[8px]">
+              <NewsHeaderSection title="پست‌های پیشنهادی" />
+
+              <div className="td-suggested-list mt-[8px]">
+                {topic.suggested_topics.map((suggestedTopic) => {
+                  const apiBase = import.meta.env.DEV
+                    ? "/api/discourse"
+                    : "https://aliasysdiscourse.ir";
+                  let thumbnailUrl =
+                    suggestedTopic.thumbnails?.[0]?.url ||
+                    suggestedTopic.image_url;
+                  if (thumbnailUrl && !thumbnailUrl.startsWith("http")) {
+                    thumbnailUrl = `${apiBase}${
+                      thumbnailUrl.startsWith("/") ? "" : "/"
+                    }${thumbnailUrl}`;
+                  }
+                  return (
+                    <div
+                      key={suggestedTopic.id}
+                      className="td-suggested-item"
+                      onClick={() => navigate(`/topic/${suggestedTopic.id}`)}
+                    >
+                      {thumbnailUrl && (
+                        <div className="td-suggested-image">
+                          <img src={thumbnailUrl} alt={suggestedTopic.title} />
+                        </div>
+                      )}
+                      <div className="td-suggested-content">
+                        <h3 className="td-suggested-topic-title">
+                          {suggestedTopic.fancy_title || suggestedTopic.title}
+                        </h3>
+                        {suggestedTopic.excerpt && (
+                          <p
+                            className="td-suggested-excerpt"
+                            dangerouslySetInnerHTML={{
+                              __html: suggestedTopic.excerpt,
+                            }}
+                          />
+                        )}
+                        <div className="td-suggested-meta">
+                          <div className="td-suggested-meta-item">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                              <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            <span>{suggestedTopic.views || 0} بازدید</span>
+                          </div>
+                          <div className="td-suggested-meta-item">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>{suggestedTopic.posts_count || 0} پست</span>
+                          </div>
+                          <div className="td-suggested-meta-item">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span>{suggestedTopic.like_count || 0} لایک</span>
+                          </div>
+                        </div>
+                        {suggestedTopic.tags &&
+                          suggestedTopic.tags.length > 0 && (
+                            <div className="td-suggested-tags">
+                              {suggestedTopic.tags.slice(0, 3).map((tag) => (
+                                <span key={tag} className="td-suggested-tag">
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>

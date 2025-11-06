@@ -30,7 +30,7 @@ export function CategoryTabs({
       <TabList>
         {/* <Tab
           id="all"
-          label="همه تاپیک‌ها"
+          label="همه پست‌ها"
           isActive={activeCategoryId === null}
           onClick={() => onCategoryChange(null)}
         /> */}

@@ -24,7 +24,7 @@ export function BusinessAssociatesSection({
         ? "/api/discourse"
         : "https://aliasysdiscourse.ir";
 
-      // بارگذاری تاپیک‌ها با تگ BusinessAssociates
+      // بارگذاری پست‌ها با تگ BusinessAssociates
       const encodedTagName = encodeURIComponent("businessassociates");
       const url = `${apiBase}/tag/${encodedTagName}.json`;
 
@@ -47,10 +47,10 @@ export function BusinessAssociatesSection({
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
       console.error(
-        "❌ خطا در بارگذاری تاپیک‌های BusinessAssociates:",
+        "❌ خطا در بارگذاری پست‌های BusinessAssociates:",
         errorMessage
       );
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

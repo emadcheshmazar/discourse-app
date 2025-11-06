@@ -52,10 +52,10 @@ const api = new DiscourseApi();
 // لیست کتگوری‌ها
 const categories = await api.getCategories();
 
-// لیست تاپیک‌ها
+// لیست پست‌ها
 const topics = await api.getLatestTopics();
 
-// تاپیک‌های یک کتگوری
+// پست‌های یک کتگوری
 const categoryTopics = await api.getCategoryTopics("general", 124);
 ```
 

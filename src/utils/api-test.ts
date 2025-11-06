@@ -41,7 +41,7 @@ export async function testApiWithNewConfig() {
 
     if (topicsResponse.ok) {
       const topics = await topicsResponse.json();
-      console.log("✅ Topics:", topics.topic_list.topics.length, "تاپیک");
+      console.log("✅ Topics:", topics.topic_list.topics.length, "پست");
     } else {
       console.log("❌ Topics failed:", topicsResponse.status);
     }
@@ -80,7 +80,7 @@ export async function testDirectFetch() {
       console.log(
         "✅ Direct fetch موفق:",
         data.topic_list?.topics?.length || 0,
-        "تاپیک"
+        "پست"
       );
       return true;
     } else {

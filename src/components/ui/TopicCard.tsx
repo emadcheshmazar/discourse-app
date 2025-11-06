@@ -149,7 +149,7 @@ export function TopicCard({ topic, onClick, styleMode = 1 }: TopicCardProps) {
             : topic.tags_descriptions &&
               Object.keys(topic.tags_descriptions).length > 0
             ? Object.values(topic.tags_descriptions)[0]
-            : `این تاپیک شامل ${topic.posts_count} پست و ${topic.reply_count} پاسخ است.`}
+            : `این پست شامل ${topic.posts_count} پست و ${topic.reply_count} پاسخ است.`}
         </p>
       </div>
     );

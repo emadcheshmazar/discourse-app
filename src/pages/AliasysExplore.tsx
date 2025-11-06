@@ -117,7 +117,7 @@ export default function AliasysExplore() {
 
           const results = await Promise.all(promises);
 
-          // همه تاپیک‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
+          // همه پست‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
           const allTopics = results.flat();
           const uniqueTopicsMap = new Map<number, DiscourseTopic>();
           allTopics.forEach((topic) => {
@@ -132,8 +132,8 @@ export default function AliasysExplore() {
       setTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error("❌ خطا در بارگذاری تاپیک‌ها:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌ها:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }
@@ -224,7 +224,7 @@ export default function AliasysExplore() {
         error={error}
         onTopicClick={handleTopicClick}
         onRetry={handleRetry}
-        emptyMessage="هیچ تاپیکی یافت نشد."
+        emptyMessage="هیچ پستی یافت نشد."
         styleMode={1}
       />
     </div>

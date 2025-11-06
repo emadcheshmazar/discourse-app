@@ -46,7 +46,7 @@ export default function Home() {
       <FilteredTopicsSection
         tagWhitelist={tagWhitelist1}
         styleMode={2}
-        emptyMessage="هیچ تاپیکی یافت نشد."
+        emptyMessage="هیچ پستی یافت نشد."
       />
       <BusinessAssociatesSection />
       <BannerSection />

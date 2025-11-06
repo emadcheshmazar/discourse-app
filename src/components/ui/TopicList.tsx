@@ -21,7 +21,7 @@ export function TopicList({
   error,
   onTopicClick,
   onRetry,
-  emptyMessage = "هیچ تاپیکی یافت نشد.",
+  emptyMessage = "هیچ پستی یافت نشد.",
   limit,
   offset,
   styleMode = 1, // پیش‌فرض: استایل مود 1

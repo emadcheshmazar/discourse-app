@@ -24,7 +24,7 @@ export function EmergingSLATopicsSection({
         ? "/api/discourse"
         : "https://aliasysdiscourse.ir";
 
-      // بارگذاری تاپیک‌ها با تگ emerging-sla
+      // بارگذاری پست‌ها با تگ emerging-sla
       const encodedTagName = encodeURIComponent("emerging-sla");
       const url = `${apiBase}/tag/${encodedTagName}.json`;
 
@@ -46,8 +46,8 @@ export function EmergingSLATopicsSection({
       setTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error("❌ خطا در بارگذاری تاپیک‌های emerging-sla:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌های emerging-sla:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }
@@ -74,7 +74,7 @@ export function EmergingSLATopicsSection({
         error={error}
         onTopicClick={handleTopicClick}
         onRetry={handleRetry}
-        emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
+        emptyMessage="هیچ پستی در این کتگوری یافت نشد."
         styleMode={1}
       />
     </div>

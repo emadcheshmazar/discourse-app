@@ -47,7 +47,7 @@ export interface DiscourseTopic {
   category_id: number;
   featured_link: string | null;
   posters: DiscoursePoster[];
-  excerpt?: string; // متن خلاصه شده تاپیک
+  excerpt?: string; // متن خلاصه شده پست
 }
 
 export interface DiscourseTag {
@@ -188,7 +188,7 @@ export interface TopicListParams {
   order?: "created" | "activity" | "views" | "posts";
   ascending?: boolean;
   category?: number;
-  filter?: string; // برای فیلتر کردن تاپیک‌ها (مثل "default")
+  filter?: string; // برای فیلتر کردن پست‌ها (مثل "default")
 }
 
 export interface SearchParams {

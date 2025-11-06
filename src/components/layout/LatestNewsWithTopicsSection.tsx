@@ -25,7 +25,7 @@ export function LatestNewsWithTopicsSection({
         ? "/api/discourse"
         : "https://aliasysdiscourse.ir";
 
-      // بارگذاری تاپیک‌ها با تگ news
+      // بارگذاری پست‌ها با تگ news
       const encodedTagName = encodeURIComponent("news");
       const url = `${apiBase}/tag/${encodedTagName}.json`;
 
@@ -47,8 +47,8 @@ export function LatestNewsWithTopicsSection({
       setNewsTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error("❌ خطا در بارگذاری تاپیک‌های news:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌های news:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

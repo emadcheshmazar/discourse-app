@@ -26,7 +26,7 @@ export function IndustrySLATopicsSection({
         ? "/api/discourse"
         : "https://aliasysdiscourse.ir";
 
-      // بارگذاری تاپیک‌ها با تگ industry-slas
+      // بارگذاری پست‌ها با تگ industry-slas
       const encodedTagName = encodeURIComponent("industry-slas");
       const url = `${apiBase}/tag/${encodedTagName}.json`;
 
@@ -48,11 +48,8 @@ export function IndustrySLATopicsSection({
       setTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error(
-        "❌ خطا در بارگذاری تاپیک‌های industry-slas:",
-        errorMessage
-      );
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌های industry-slas:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }
@@ -85,7 +82,7 @@ export function IndustrySLATopicsSection({
           error={error}
           onTopicClick={handleTopicClick}
           onRetry={handleRetry}
-          emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
+          emptyMessage="هیچ پستی در این کتگوری یافت نشد."
           styleMode={5}
         />
       </div>

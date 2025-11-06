@@ -21,7 +21,7 @@ export function TaggedTopicsSection({
   sectionHeaderSubtitle,
   tagWhitelist = defaultTagWhitelist,
   styleMode = 4,
-  emptyMessage = "هیچ تاپیکی در این کتگوری یافت نشد.",
+  emptyMessage = "هیچ پستی در این کتگوری یافت نشد.",
 }: TaggedTopicsSectionProps) {
   const navigate = useNavigate();
   const [topics, setTopics] = useState<DiscourseTopic[]>([]);
@@ -125,7 +125,7 @@ export function TaggedTopicsSection({
 
           const results = await Promise.all(promises);
 
-          // همه تاپیک‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
+          // همه پست‌ها را combine کن و duplicate ها را حذف کن (بر اساس id)
           const allTopics = results.flat();
           const uniqueTopicsMap = new Map<number, DiscourseTopic>();
           allTopics.forEach((topic) => {
@@ -158,8 +158,8 @@ export function TaggedTopicsSection({
       setTopics(topicsArray);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error("❌ خطا در بارگذاری تاپیک‌ها:", errorMessage);
-      setError(`خطا در بارگذاری تاپیک‌ها: ${errorMessage}`);
+      console.error("❌ خطا در بارگذاری پست‌ها:", errorMessage);
+      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
     } finally {
       setLoading(false);
     }

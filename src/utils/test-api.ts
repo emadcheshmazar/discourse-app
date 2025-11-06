@@ -14,13 +14,13 @@ export async function testAliasysAPI() {
       "کتگوری"
     );
 
-    console.log("📝 دریافت لیست تاپیک‌ها...");
+    console.log("📝 دریافت لیست پست‌ها...");
     const topics = await api.getLatestTopics();
-    console.log("✅ تاپیک‌ها:", topics.topic_list.topics.length, "تاپیک");
+    console.log("✅ پست‌ها:", topics.topic_list.topics.length, "پست");
 
     if (topics.topic_list.topics.length > 0) {
       const firstTopic = topics.topic_list.topics[0];
-      console.log("📌 اولین تاپیک:", firstTopic.title);
+      console.log("📌 اولین پست:", firstTopic.title);
     }
 
     return true;
