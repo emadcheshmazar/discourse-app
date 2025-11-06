@@ -156,15 +156,75 @@ export function TopicCard({ topic, onClick, styleMode = 1 }: TopicCardProps) {
   }
 
   if (styleMode === 3) {
+    // کارت فقط تصویر - ابعاد: 302x201، رنگ پس‌زمینه: #f5f5f5
+    const imageUrl = (topic as unknown as { image_url: string }).image_url;
     return (
       <div
-        className="border border-card flex flex-col text-content-subdued transition duration-200 justify-between bg-surface shadow-card sm:rounded-card cursor-pointer hover:shadow-card-hovered transition-all ease-in-out duration-200 justify-start stretch"
+        className="topic-card-image-only"
         onClick={() => onClick?.(topic)}
+        style={{
+          width: "302px",
+          height: "201px",
+          backgroundColor: "#f5f5f5",
+          overflow: "hidden",
+          cursor: "pointer",
+          borderRadius: "var(--bm-radius-base)",
+        }}
       >
-        <div className="p-4 text-center text-content-subdued">
-          <p className="text-sm">استایل مود 3 - در حال توسعه</p>
-          <p className="text-xs mt-2">{topic.title}</p>
-        </div>
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={topic.title}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = "none";
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#f5f5f5",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="20"
+                y="20"
+                width="40"
+                height="30"
+                rx="2"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+              />
+              <path
+                d="M20 32L40 40L60 32"
+                stroke="#ccc"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+              />
+              <circle cx="35" cy="28" r="2" fill="#ccc" />
+              <circle cx="45" cy="28" r="2" fill="#ccc" />
+            </svg>
+          </div>
+        )}
       </div>
     );
   }

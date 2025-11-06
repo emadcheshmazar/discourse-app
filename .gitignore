@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Discourse integration
+discourse-integration
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

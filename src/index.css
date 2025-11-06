@@ -3199,6 +3199,17 @@ ul {
   flex-shrink: 0;
 }
 
+/* کارت فقط تصویر */
+.topic-card-image-only {
+  flex-shrink: 0;
+  width: 302px;
+  height: 201px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: var(--bm-radius-base);
+}
+
 .topic-card-style-2 {
   width: 400px;
   height: 400px;

@@ -8,7 +8,6 @@ import { PostsSection } from "../components/layout/PostsSection";
 import { SpaceHeader } from "../components/layout/SpaceHeader";
 import { testApiWithNewConfig, testDirectFetch } from "../utils/api-test";
 import type { DiscourseTopic, DiscourseTag } from "../types/discourse";
-import { HorizontalImageCardsSection } from "../components/layout/HorizontalImageCardsSection";
 import { BusinessAssociatesSection } from "../components/layout/BusinessAssociatesSection";
 import { BannerSection } from "../components/layout/BannerSection";
 import { NewsHeaderSection } from "../components/layout/LatestNewsSection";
@@ -234,18 +233,7 @@ export default function Home() {
         emptyMessage="هیچ تاپیکی یافت نشد."
         styleMode={2}
       />
-      <HorizontalImageCardsSection />
-      <TopicList
-        topics={topics2}
-        limit={3}
-        offset={3}
-        loading={loading2}
-        error={error2}
-        onTopicClick={handleTopicClick}
-        onRetry={handleRetry2}
-        emptyMessage="هیچ تاپیکی در این کتگوری یافت نشد."
-        styleMode={2}
-      />
+
       <BusinessAssociatesSection />
       <BannerSection />
       <NewsHeaderSection />
