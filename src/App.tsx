@@ -2,6 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TopicDetail from "./pages/TopicDetail";
 import AliasysExplore from "./pages/AliasysExplore";
+import DatacenterSolutions from "./pages/DatacenterSolutions";
+import DatacenterProducts from "./pages/DatacenterProducts";
+import TechnocraticServices from "./pages/TechnocraticServices";
+import ContinuitySLA from "./pages/ContinuitySLA";
 import { Header } from "./components/layout/Header";
 import "./App.css";
 
@@ -22,6 +26,19 @@ function App() {
             />
             <Route path="/topic/:topicId" element={<TopicDetail />} />
             <Route path="/aliasys-explore" element={<AliasysExplore />} />
+            <Route
+              path="/datacenter-solutions"
+              element={<DatacenterSolutions />}
+            />
+            <Route
+              path="/datacenter-products"
+              element={<DatacenterProducts />}
+            />
+            <Route
+              path="/technocratic-services"
+              element={<TechnocraticServices />}
+            />
+            <Route path="/continuity-sla" element={<ContinuitySLA />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </main>

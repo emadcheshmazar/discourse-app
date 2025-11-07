@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TagTabs } from "../components/layout/TagTabs";
-import { TopicList } from "../components/ui/TopicList";
-import type { DiscourseTopic, DiscourseTag } from "../types/discourse";
-import { AliasysExploreBannerSection } from "../components/layout/AliasysExploreBannerSection";
+import { TagTabs } from "../../components/layout/TagTabs";
+import { TopicList } from "../../components/ui/TopicList";
+import type { DiscourseTopic, DiscourseTag } from "../../types/discourse";
+import { AliasysExploreBannerSection } from "../../components/layout/AliasysExploreBannerSection";
 
 // Whitelist برای تگ‌های مجاز
 const tagWhitelist: string[] = [

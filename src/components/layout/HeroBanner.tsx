@@ -10,10 +10,10 @@ export function HeroBanner() {
           <div className="font-semibold text-heading-2xs @xl:text-heading-xs">
             همراه مطمئن فناوری شما
           </div>
-          <h2 className="font-bold text-heading-md @xl:text-heading-xl">
+          <h2 className="font-bolder text-heading @xl:text-heading-xl mt-[6rem]">
             آلیاسیــس
           </h2>
-          <div className="text-md opacity-95 w-full mt-3">
+          <div className="text-lg opacity-95 w-full mt-3">
             <article className="prose" style={{ color: "inherit" }}>
               <p>
                 <strong>توانمندسازی تداوم با فرهنگ تکنوکراتیک</strong>
@@ -23,11 +23,7 @@ export function HeroBanner() {
           </div>
         </div>
         <div className="hero-banner-background">
-          <img
-            src="https://tribe-s3-production.imgix.net/qdwJDFWer4TwexUZIOOTG?fit=max&w=2000&auto=compress,format"
-            alt=""
-            className="hero-banner-image"
-          />
+          <img src="/herobaner.avif" alt="" className="hero-banner-image" />
           <div className="hero-banner-overlay"></div>
         </div>
       </div>

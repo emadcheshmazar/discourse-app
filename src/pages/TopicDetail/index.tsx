@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ErrorMessage } from "../components/ui/ErrorMessage";
-import type { DiscoursePost } from "../types/discourse";
+import { ErrorMessage } from "../../components/ui/ErrorMessage";
+import type { DiscoursePost } from "../../types/discourse";
 import "./TopicDetail.css";
-import { NewsHeaderSection } from "../components/layout/LatestNewsSection";
+import { NewsHeaderSection } from "../../components/layout/LatestNewsSection";
 
 interface SuggestedTopic {
   id: number;
