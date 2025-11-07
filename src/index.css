@@ -3157,7 +3157,7 @@ ul {
   padding: 0;
   margin-top: 0.25rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 8px;
+  gap: 4px;
   justify-items: center;
 }
 
@@ -3503,7 +3503,7 @@ ul {
   padding: 0;
   margin-top: 0.25rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 8px;
+  gap: 4px;
 }
 
 /* در حالت grid، همه کارت‌ها باید عرض کامل grid cell را بگیرند */
