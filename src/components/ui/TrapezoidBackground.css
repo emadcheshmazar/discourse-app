@@ -1,0 +1,24 @@
+.trapezoid-background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.trapezoid-background-shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f6081;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 120px 100%, 0 calc(100% - 120px));
+  z-index: 0;
+}
+
+.trapezoid-background-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}

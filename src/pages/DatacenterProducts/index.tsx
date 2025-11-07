@@ -1,12 +1,16 @@
+import { TrapezoidBackground } from "../../components/ui/TrapezoidBackground";
+import { TaggedTopicsSection } from "../../components/layout/TaggedTopicsSection";
+
 export default function DatacenterProducts() {
   return (
-    <div className="w-full max-w-[1400px] mx-auto px-2 md:px-4 lg:px-6 py-8">
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          محصولات دیتاسنتر
-        </h1>
-      </div>
+    <div className="home-container">
+      <TrapezoidBackground className="min-h-[280px]">
+        <div className="w-full flex flex-col items-start px-[4rem] pt-[5rem]">
+          <h1 className="text-3xl font-bold text-[#fff]">محصولات دیتاسنتر</h1>
+          <p className="text-[#fff] text-lg">محصولات دیتاسنتر آلیاسیس.</p>
+        </div>
+      </TrapezoidBackground>
+      <TaggedTopicsSection layoutMode="grid" />
     </div>
   );
 }
-

@@ -202,17 +202,16 @@ export function FilteredTopicsSection({
         onTagChange={handleTagChange}
         loading={tagsLoading}
       />
-      <div className="mt-[-20px]">
-        <HorizontalTopicList
-          topics={topics}
-          loading={loading}
-          error={error}
-          onTopicClick={handleTopicClick}
-          onRetry={handleRetry}
-          emptyMessage={emptyMessage}
-          styleMode={styleMode}
-        />
-      </div>
+      <HorizontalTopicList
+        topics={topics}
+        loading={loading}
+        error={error}
+        onTopicClick={handleTopicClick}
+        onRetry={handleRetry}
+        emptyMessage={emptyMessage}
+        styleMode={styleMode}
+        
+      />
     </div>
   );
 }

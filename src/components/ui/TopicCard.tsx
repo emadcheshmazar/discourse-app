@@ -4,13 +4,21 @@ interface TopicCardProps {
   topic: DiscourseTopic;
   onClick?: (topic: DiscourseTopic) => void;
   styleMode?: number;
+  className?: string;
 }
 
-export function TopicCard({ topic, onClick, styleMode = 1 }: TopicCardProps) {
+export function TopicCard({
+  topic,
+  onClick,
+  styleMode = 1,
+  className,
+}: TopicCardProps) {
   if (styleMode === 1) {
+    const baseClasses =
+      "border border-card flex flex-col text-content-subdued transition duration-200 justify-between bg-surface shadow-card sm:rounded-card cursor-pointer hover:shadow-card-hovered transition-all ease-in-out duration-200 justify-start stretch";
     return (
       <div
-        className="border border-card flex flex-col text-content-subdued transition duration-200 justify-between bg-surface shadow-card sm:rounded-card cursor-pointer hover:shadow-card-hovered transition-all ease-in-out duration-200 justify-start stretch"
+        className={className ? `${baseClasses} ${className}` : baseClasses}
         onClick={() => onClick?.(topic)}
       >
         <div className="flex-1 px-2 py-2 flex flex-col gap-1">

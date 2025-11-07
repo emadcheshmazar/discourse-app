@@ -114,7 +114,7 @@ export function BusinessAssociatesSection({
             <div className="space-y-3 sm:space-y-3.5 md:space-y-4 lg:space-y-5">
               <div className="relative">
                 <div
-                  className="overflow-hidden mt-[-20px]"
+                  className="overflow-hidden"
                   style={{
                     marginInline: "-12px -1px",
                     paddingInline: "12px 1px",

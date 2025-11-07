@@ -13,6 +13,7 @@ interface TopicListProps {
   limit?: number;
   offset?: number;
   styleMode?: number; // استایل مود: 1, 2, 3, ...
+  layoutMode?: "scroll" | "grid"; // حالت نمایش: scroll (پیش‌فرض) یا grid
 }
 
 export function TopicList({
@@ -25,32 +26,25 @@ export function TopicList({
   limit,
   offset,
   styleMode = 1, // پیش‌فرض: استایل مود 1
+  layoutMode = "scroll", // پیش‌فرض: اسکرول افقی
 }: TopicListProps) {
   if (loading) {
     const displayCount = limit || 6;
 
-    // برای styleMode 3، 4 و 5، اسکلت افقی با اسکرول
-    if (styleMode === 3 || styleMode === 4 || styleMode === 5) {
+    // اگر layoutMode برابر scroll باشد، اسکلت افقی با اسکرول
+    if (layoutMode === "scroll") {
       return (
         <div className="horizontal-topic-list-wrapper">
-          <div
-            className="horizontal-topic-list-container"
-            style={{ gap: "4px" }}
-          >
+          <div className="horizontal-topic-list-container">
             <TopicCardSkeleton styleMode={styleMode} count={displayCount} />
           </div>
         </div>
       );
     }
 
-    // کلاس‌های grid بر اساس styleMode
-    const gridClasses =
-      styleMode === 2
-        ? "topic-list-style-2"
-        : "grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1";
-
+    // اگر layoutMode برابر grid باشد، از گرید ریسپانسیو استفاده می‌شود
     return (
-      <div className={gridClasses}>
+      <div className="topic-list-grid">
         <TopicCardSkeleton styleMode={styleMode} count={displayCount} />
       </div>
     );
@@ -73,11 +67,11 @@ export function TopicList({
       ? topics.slice(offset, offset + limit)
       : topics;
 
-  // برای styleMode 3، 4 و 5، نمایش افقی با اسکرول
-  if (styleMode === 3 || styleMode === 4 || styleMode === 5) {
+  // اگر layoutMode برابر scroll باشد، نمایش افقی با اسکرول
+  if (layoutMode === "scroll") {
     return (
       <div className="horizontal-topic-list-wrapper">
-        <div className="horizontal-topic-list-container" style={{ gap: "4px" }}>
+        <div className="horizontal-topic-list-container">
           {displayTopics.map((topic) => (
             <TopicCard
               key={topic.id}
@@ -91,16 +85,9 @@ export function TopicList({
     );
   }
 
-  // کلاس‌های grid بر اساس styleMode
-  const gridClasses =
-    styleMode === 2
-      ? "topic-list-style-2"
-      : styleMode === 1
-      ? "topic-list-style-1"
-      : "grid w-full p-0 mt-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1";
-
+  // اگر layoutMode برابر grid باشد، از گرید ریسپانسیو استفاده می‌شود
   return (
-    <div className={gridClasses}>
+    <div className="topic-list-grid">
       {displayTopics.map((topic) => (
         <TopicCard
           key={topic.id}

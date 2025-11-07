@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { DropdownMenu, type DropdownMenuItem } from "./DropdownMenu";
 
-const menuItems: DropdownMenuItem[] = [
+const menuItems = [
   { label: "راه‌حل‌های دیتاسنتر", link: "/datacenter-solutions" },
   { label: "محصولات دیتاسنتر", link: "/datacenter-products" },
   { label: "خدمات تکنوکراتیک", link: "/technocratic-services" },
@@ -11,28 +10,6 @@ const menuItems: DropdownMenuItem[] = [
 
 export function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
-
-  const toggleDropdown = () => {
-    if (isDropdownOpen) {
-      setIsClosing(true);
-      setTimeout(() => {
-        setIsDropdownOpen(false);
-        setIsClosing(false);
-      }, 200);
-    } else {
-      setIsDropdownOpen(true);
-      setIsClosing(false);
-    }
-  };
-
-  const closeDropdown = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setIsDropdownOpen(false);
-      setIsClosing(false);
-    }, 200);
-  };
 
   return (
     <div className="header-wrapper">
@@ -52,13 +29,32 @@ export function Header() {
             >
               آلیاس اکسپلور
             </Link>
-            <DropdownMenu
-              items={menuItems}
-              triggerLabel="پیشنهادات آلیاسیس"
-              isOpen={isDropdownOpen}
-              onToggle={toggleDropdown}
-              onClose={closeDropdown}
-            />
+            <div className="dropdown-menu-wrapper">
+              <div
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="dropdown-menu-trigger"
+              >
+                پیشنهادات آلیاسیس
+                <svg
+                  className={`dropdown-arrow ${
+                    isDropdownOpen ? "dropdown-arrow-open" : ""
+                  }`}
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6 L8 10 L12 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
           <a
             href="https://aliasysdiscourse.ir/login"
@@ -96,26 +92,35 @@ export function Header() {
         </div>
       </header>
       {isDropdownOpen && (
-        <div
-          className={`dropdown-menu-box ${
-            isClosing ? "dropdown-fade-out" : "dropdown-fade-in"
-          }`}
-        >
-          <div className="dropdown-menu-content">
-            <div className="dropdown-menu-grid">
-              {menuItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.link}
-                  onClick={closeDropdown}
-                  className="dropdown-menu-item"
-                >
-                  <h3 className="dropdown-menu-item-title">{item.label}</h3>
-                </Link>
-              ))}
+        <>
+          <div
+            onClick={() => setIsDropdownOpen(false)}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 99,
+            }}
+          />
+          <div className="dropdown-menu-box dropdown-fade-in">
+            <div className="dropdown-menu-content">
+              <div className="dropdown-menu-grid">
+                {menuItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    onClick={() => setIsDropdownOpen(false)}
+                    className="dropdown-menu-item"
+                  >
+                    <h3 className="dropdown-menu-item-title">{item.label}</h3>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

@@ -3177,7 +3177,7 @@ ul {
 .horizontal-topic-list-wrapper {
   position: relative;
   width: 100%;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 .horizontal-topic-list-container {
@@ -3186,7 +3186,7 @@ ul {
   overflow-y: hidden;
   scroll-behavior: smooth;
   gap: 4px;
-  padding: 0.5rem 0;
+  padding: 4px 0 0;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -3197,6 +3197,13 @@ ul {
 
 .horizontal-topic-list-container > * {
   flex-shrink: 0;
+}
+
+/* کارت‌های styleMode=1 در حالت scroll باید عرض ثابت داشته باشند */
+.horizontal-topic-list-container > .border.border-card {
+  width: 443px;
+  min-width: 443px;
+  max-width: 443px;
 }
 
 /* کارت فقط تصویر */
@@ -3486,5 +3493,55 @@ ul {
 @media (min-width: 1024px) {
   .topic-list-style-1 {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Grid ریسپانسیو برای layoutMode="grid" */
+.topic-list-grid {
+  display: grid;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.25rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* در حالت grid، همه کارت‌ها باید عرض کامل grid cell را بگیرند */
+.topic-list-grid > * {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
+/* Override برای کارت‌های مختلف در حالت grid */
+.topic-list-grid .topic-card-style-2 {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
+.topic-list-grid .topic-card-image-only {
+  width: 100% !important;
+}
+
+.topic-list-grid .topic-card-style-4 {
+  width: 100% !important;
+}
+
+.topic-list-grid .border.border-card {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
+@media (min-width: 768px) {
+  .topic-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .topic-list-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

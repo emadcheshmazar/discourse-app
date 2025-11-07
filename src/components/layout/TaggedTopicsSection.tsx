@@ -2,26 +2,23 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TagTabs } from "./TagTabs";
 import { TopicList } from "../ui/TopicList";
-import { SectionHeader } from "./SectionHeader";
 import type { DiscourseTopic, DiscourseTag } from "../../types/discourse";
 
 interface TaggedTopicsSectionProps {
-  sectionHeaderTitle?: string;
-  sectionHeaderSubtitle?: string;
   tagWhitelist?: string[] | undefined;
   styleMode?: number;
   emptyMessage?: string;
+  layoutMode?: "scroll" | "grid";
 }
 
 // Whitelist پیش‌فرض برای تگ‌های مجاز
 const defaultTagWhitelist: string[] = ["ذخیرهسازی", "پردازش", "شبکه", "امنیت"];
 
 export function TaggedTopicsSection({
-  sectionHeaderTitle,
-  sectionHeaderSubtitle,
   tagWhitelist = defaultTagWhitelist,
   styleMode = 4,
   emptyMessage = "هیچ پستی در این کتگوری یافت نشد.",
+  layoutMode = "scroll",
 }: TaggedTopicsSectionProps) {
   const navigate = useNavigate();
   const [topics, setTopics] = useState<DiscourseTopic[]>([]);
@@ -203,27 +200,22 @@ export function TaggedTopicsSection({
 
   return (
     <>
-      <SectionHeader
-        title={sectionHeaderTitle}
-        subtitle={sectionHeaderSubtitle}
-      />
       <TagTabs
         tags={getFilteredTags()}
         activeTagName={activeTagName}
         onTagChange={handleTagChange}
         loading={tagsLoading}
       />
-      <div className="mt-[-20px]">
-        <TopicList
-          topics={topics}
-          loading={loading}
-          error={error}
-          onTopicClick={handleTopicClick}
-          onRetry={handleRetry}
-          emptyMessage={emptyMessage}
-          styleMode={styleMode}
-        />
-      </div>
+      <TopicList
+        topics={topics}
+        loading={loading}
+        error={error}
+        onTopicClick={handleTopicClick}
+        onRetry={handleRetry}
+        emptyMessage={emptyMessage}
+        styleMode={styleMode}
+        layoutMode={layoutMode}
+      />
     </>
   );
 }

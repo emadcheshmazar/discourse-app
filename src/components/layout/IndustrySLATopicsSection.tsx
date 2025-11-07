@@ -75,20 +75,17 @@ export function IndustrySLATopicsSection({
         blockId="top-industry-slas-section"
         extraPadding={true}
       />
-      <div className="mt-[-20px]">
-        <TopicList
-          topics={topics}
-          loading={loading}
-          error={error}
-          onTopicClick={handleTopicClick}
-          onRetry={handleRetry}
-          emptyMessage="هیچ پستی در این کتگوری یافت نشد."
-          styleMode={5}
-        />
-      </div>
-      <div className="mt-[-20px]">
-        <DateBannerSection />
-      </div>
+
+      <TopicList
+        topics={topics}
+        loading={loading}
+        error={error}
+        onTopicClick={handleTopicClick}
+        onRetry={handleRetry}
+        emptyMessage="هیچ پستی در این کتگوری یافت نشد."
+        styleMode={5}
+      />
+      <DateBannerSection />
     </div>
   );
 }

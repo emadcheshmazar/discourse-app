@@ -78,6 +78,7 @@ export function LatestNewsWithTopicsSection({
         onRetry={handleRetry}
         emptyMessage="محتوایی برای نمایش وجود ندارد."
         styleMode={1}
+          
       />
     </div>
   );
