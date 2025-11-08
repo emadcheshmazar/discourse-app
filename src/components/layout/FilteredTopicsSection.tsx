@@ -210,7 +210,6 @@ export function FilteredTopicsSection({
         onRetry={handleRetry}
         emptyMessage={emptyMessage}
         styleMode={styleMode}
-        
       />
     </div>
   );
