@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { HeroBanner } from "../../components/layout/HeroBanner";
 import { PostsSection } from "../../components/layout/PostsSection";
 import { SpaceHeader } from "../../components/layout/SpaceHeader";
-import { testApiWithNewConfig, testDirectFetch } from "../../utils/api-test";
 import { BusinessAssociatesSection } from "../../components/layout/BusinessAssociatesSection";
 import { BannerSection } from "../../components/layout/BannerSection";
 import { LatestNewsWithTopicsSection } from "../../components/layout/LatestNewsWithTopicsSection";
@@ -17,46 +15,25 @@ import { LatestServicesTopicsSection } from "../../components/layout/LatestServi
 import { EmergingSLATopicsSection } from "../../components/layout/EmergingSLATopicsSection";
 import { IndustrySLATopicsSection } from "../../components/layout/IndustrySLATopicsSection";
 import { FilteredTopicsSection } from "../../components/layout/FilteredTopicsSection";
+import { FilteredTopicsByCategorySection } from "../../components/layout/FilteredTopicsByCategorySection";
+import { ContinuityManagementSection } from "../../components/layout/ContinuityManagementSection";
 
 export default function Home() {
-  // Whitelist برای تگ‌های مجاز - اگه خالی یا undefined باشه، همه تگ‌ها نمایش داده میشن
-  const tagWhitelist1: string[] = [
-    "data-storage",
-    "زیرساخت-محاسباتی",
-    "شبکه-سازمانی",
-    "امنیت-سایبری",
-  ]; // بخش اول - فقط این تگ‌ها نمایش داده می‌شوند
-
-  useEffect(() => {
-    testApiWithNewConfig().then((success) => {
-      if (success) {
-        console.log("✅ API تست موفق");
-      } else {
-        console.log("❌ API تست ناموفق - تست مستقیم...");
-        testDirectFetch();
-      }
-    });
-  }, []);
-
   return (
     <div className="home-container">
+      {/* <FilteredTopicsByCategorySection />
       <HeroBanner />
       <PostsSection />
       <SpaceHeader />
-      <FilteredTopicsSection
-        tagWhitelist={tagWhitelist1}
-        styleMode={2}
-        emptyMessage="هیچ پستی یافت نشد."
-      />
+      <FilteredTopicsSection /> */}
       <BusinessAssociatesSection />
-      <BannerSection />
+      {/* <BannerSection />
       <LatestNewsWithTopicsSection />
       <SectionHeader
         title="محصولات برتر ما"
         subtitle="از برترین شرکای ما در سراسر جهان"
       />
-      <TaggedTopicsSection styleMode={4} />
-      {/* <TopProductsCardsSection /> */}
+      <TaggedTopicsSection />
       <FooterBannerSection />
       <LatestServicesSection />
       <LatestServicesTopicsSection />
@@ -69,8 +46,9 @@ export default function Home() {
       <LatestNewsAndContinuitySection />
       <EmergingSLATopicsSection />
       <IndustrySLATopicsSection />
+      <ContinuityManagementSection />
 
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

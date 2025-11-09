@@ -3528,7 +3528,46 @@ ul {
   width: 100% !important;
 }
 
+.topic-list-grid .topic-card-style-6 {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
 .topic-list-grid .border.border-card {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: unset !important;
+}
+
+/* Service Card Style (styleMode 6) */
+.topic-card-style-6 {
+  border: 1px solid var(--bm-color-line);
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  transition: all 0.2s ease-in-out;
+  justify-content: space-between;
+  background-color: var(--bm-color-surface);
+  box-shadow: var(--bm-shadow-card);
+  border-radius: var(--bm-radius-base);
+  cursor: pointer;
+  height: 100%;
+  min-width: 300px;
+  max-width: 300px;
+}
+
+.topic-card-style-6:hover {
+  box-shadow: var(--bm-shadow-card-hovered);
+}
+
+/* در حالت scroll */
+.horizontal-topic-list-container .topic-card-style-6 {
+  flex-shrink: 0;
+}
+
+/* در حالت grid */
+.topic-list-grid .topic-card-style-6 {
   width: 100% !important;
   min-width: unset !important;
   max-width: unset !important;

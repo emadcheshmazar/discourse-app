@@ -58,7 +58,26 @@ export async function apiCall<T>(
     const response = await fetch(url, fetchOptions);
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      // تلاش برای خواندن پیام خطا از response
+      let errorMessage = `HTTP error! status: ${response.status}`;
+      try {
+        const errorText = await response.text();
+        if (errorText) {
+          try {
+            const errorJson = JSON.parse(errorText);
+            errorMessage = errorJson.error || errorJson.message || errorMessage;
+          } catch {
+            // اگر JSON نبود، از متن استفاده کن
+            errorMessage =
+              errorText.length > 200
+                ? `${errorText.substring(0, 200)}...`
+                : errorText;
+          }
+        }
+      } catch {
+        // اگر نتوانستیم متن خطا را بخوانیم، از status استفاده می‌کنیم
+      }
+      throw new Error(errorMessage);
     }
 
     const data: T = await response.json();
@@ -71,6 +90,15 @@ export async function apiCall<T>(
   } catch (err) {
     const errorMessage =
       err instanceof Error ? err.message : "خطای ناشناخته در ارتباط با سرور";
+
+    // Log error for debugging
+    if (import.meta.env.DEV) {
+      console.error(`❌ API Call Error for ${endpoint}:`, {
+        url,
+        error: errorMessage,
+        errorObject: err,
+      });
+    }
 
     return {
       data: null,

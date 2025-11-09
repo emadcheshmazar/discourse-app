@@ -14,7 +14,10 @@ export const API_ENDPOINTS = {
 
   // Categories endpoints
   CATEGORIES: "/categories.json",
-  CATEGORY_TOPICS: "/c/{category_slug}/{category_id}/l/latest.json",
+  CATEGORY_TOPICS: "/c/{category_id}/l/latest.json", // فقط با category_id
+  CATEGORY_TOPICS_WITH_SLUG: "/c/{category_slug}/{category_id}/l/latest.json", // با slug و id
+  SUBCATEGORY_TOPICS:
+    "/c/{parent_category_slug}/{subcategory_slug}/l/latest.json", // با parent و sub-category slug
 
   // Tags endpoints
   TAGS: "/tags.json",

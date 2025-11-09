@@ -104,6 +104,37 @@ export function TopicCardSkeleton({
     );
   }
 
+  if (styleMode === 6) {
+    // اسکلت برای Service Card (300px)
+    return (
+      <>
+        {Array.from({ length: count }).map((_, index) => (
+          <div
+            key={index}
+            className="topic-card-style-6 skeleton-shimmer"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background:
+                  "linear-gradient(90deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%)",
+                backgroundSize: "200% 100%",
+              }}
+            />
+          </div>
+        ))}
+      </>
+    );
+  }
+
   // اسکلت پیش‌فرض
   return (
     <>

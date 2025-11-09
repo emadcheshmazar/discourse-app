@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopicList } from "../ui/TopicList";
 import type { DiscourseTopic } from "../../types/discourse";
+import { useFilteredTopicsBySubCategory } from "../../api/hooks/use-filtered-topics-by-subcategory";
 
 interface BusinessAssociatesSectionProps {
   className?: string;
@@ -11,61 +11,19 @@ export function BusinessAssociatesSection({
   className = "",
 }: BusinessAssociatesSectionProps) {
   const navigate = useNavigate();
-  const [topics, setTopics] = useState<DiscourseTopic[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const loadTopics = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-
-      const apiBase = import.meta.env.DEV
-        ? "/api/discourse"
-        : "https://aliasysdiscourse.ir";
-
-      // بارگذاری پست‌ها با تگ BusinessAssociates
-      const encodedTagName = encodeURIComponent("businessassociates");
-      const url = `${apiBase}/tag/${encodedTagName}.json`;
-
-      const response = await fetch(url, {
-        method: "GET",
-        mode: import.meta.env.DEV ? "same-origin" : "cors",
-        credentials: "include",
-        headers: {
-          accept: "application/json, text/javascript, */*; q=0.01",
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const topicsArray = data?.topic_list?.topics || [];
-      setTopics(topicsArray);
-    } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : String(err);
-      console.error(
-        "❌ خطا در بارگذاری پست‌های BusinessAssociates:",
-        errorMessage
-      );
-      setError(`خطا در بارگذاری پست‌ها: ${errorMessage}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    loadTopics();
-  }, []);
+  // دریافت پست‌های sub-category business-associates در parent category trust-catalogue
+  const { topics, loading, error, refetch } = useFilteredTopicsBySubCategory({
+    parentCategorySlug: "trust-catalogue",
+    subCategorySlug: "business-associates",
+  });
 
   const handleTopicClick = (topic: DiscourseTopic) => {
     navigate(`/topic/${topic.id}`);
   };
 
   const handleRetry = () => {
-    loadTopics();
+    refetch();
   };
   return (
     <section
@@ -120,6 +78,7 @@ export function BusinessAssociatesSection({
                     paddingInline: "12px 1px",
                   }}
                 >
+                  TopicList
                   <TopicList
                     topics={topics}
                     loading={loading}
@@ -129,6 +88,7 @@ export function BusinessAssociatesSection({
                     emptyMessage="محتوایی برای نمایش وجود ندارد."
                     styleMode={3}
                   />
+                  TopicList
                 </div>
               </div>
             </div>
