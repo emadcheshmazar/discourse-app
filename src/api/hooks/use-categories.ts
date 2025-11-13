@@ -50,7 +50,31 @@ export function useCategories(): UseCategoriesResult {
       }
 
       if (isMountedRef.current && !abortController.signal.aborted) {
-        setCategories(response.data?.category_list?.categories || []);
+        const rawCategories = response.data?.category_list?.categories || [];
+
+        const categoriesMap = new Map<number, DiscourseCategory>();
+        rawCategories.forEach((category) => {
+          categoriesMap.set(category.id, category);
+
+          if (
+            category.subcategory_list &&
+            category.subcategory_list.length > 0
+          ) {
+            category.subcategory_list.forEach((subCategory) => {
+              const normalizedSubCategory: DiscourseCategory = {
+                ...subCategory,
+                parent_category_id:
+                  subCategory.parent_category_id ?? category.id,
+              };
+              categoriesMap.set(
+                normalizedSubCategory.id,
+                normalizedSubCategory
+              );
+            });
+          }
+        });
+
+        setCategories(Array.from(categoriesMap.values()));
         setError(null);
       }
     } catch (err) {

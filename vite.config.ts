@@ -59,6 +59,21 @@ export default defineConfig(({ mode }) => ({
                     "en-US,en;q=0.9,fa-IR;q=0.8,fa;q=0.7"
                   );
                 });
+                proxy.on("proxyRes", (proxyRes) => {
+                  const statusCode = proxyRes.statusCode ?? 0;
+                  const locationHeader = proxyRes.headers.location;
+
+                  if (
+                    locationHeader &&
+                    locationHeader.startsWith("https://aliasysdiscourse.ir/") &&
+                    [301, 302, 307, 308].includes(statusCode)
+                  ) {
+                    proxyRes.headers.location = locationHeader.replace(
+                      "https://aliasysdiscourse.ir",
+                      "/api/discourse"
+                    );
+                  }
+                });
               },
             },
           }

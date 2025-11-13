@@ -78,7 +78,6 @@ export function BusinessAssociatesSection({
                     paddingInline: "12px 1px",
                   }}
                 >
-                  TopicList
                   <TopicList
                     topics={topics}
                     loading={loading}
@@ -88,7 +87,6 @@ export function BusinessAssociatesSection({
                     emptyMessage="محتوایی برای نمایش وجود ندارد."
                     styleMode={3}
                   />
-                  TopicList
                 </div>
               </div>
             </div>

@@ -68,6 +68,7 @@ export interface DiscourseTagList {
 
 export interface DiscourseCategory {
   id: number;
+  parent_category_id?: number | null;
   name: string;
   color: string;
   text_color: string;
@@ -111,6 +112,7 @@ export interface DiscourseCategory {
   uploaded_background: string | null;
   uploaded_background_dark: string | null;
   topics?: DiscourseTopic[];
+  subcategory_list?: DiscourseCategory[];
 }
 
 export interface DiscourseTopicList {

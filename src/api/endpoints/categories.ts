@@ -11,5 +11,6 @@ import type { DiscourseCategoryList } from "../../types/discourse";
  * Get all categories
  */
 export async function getCategories() {
-  return apiCall<DiscourseCategoryList>(API_ENDPOINTS.CATEGORIES);
+  const endpoint = `${API_ENDPOINTS.CATEGORIES}?include_subcategories=true`;
+  return apiCall<DiscourseCategoryList>(endpoint);
 }
