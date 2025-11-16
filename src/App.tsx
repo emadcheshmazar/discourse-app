@@ -14,10 +14,10 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 p-0">
+      <div className="min-h-screen bg-gray-50 p-0 m-0">
         <Header />
 
-        <main>
+        <main className="m-0 p-0">
           <Routes>
             <Route path="/discourse-landing-build/" element={<Home />} />
             <Route
